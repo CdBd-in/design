@@ -1,0 +1,9 @@
+# 카테고리 저장소 폴더 — 각자 독립 저장소이므로 허브는 추적하지 않음
+cdbd-design-system/
+cdbd-marketing/
+cdbd-design-service/
+cdbd-templates/
+makevu-qrstp/
+
+# macOS 잡파일
+.DS_Store
