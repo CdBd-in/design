@@ -173,12 +173,10 @@
       }
     ],
     "direction": "horizontal",
-    "width": 672.5
+    "width": 701.5
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian42-brat:BRAT": false,
-      "obsidian-git:Open Git source control": false,
       "switcher:빠른 전환기 열기": false,
       "graph:그래프 뷰 열기": false,
       "canvas:새 캔버스 만들기": false,
@@ -186,9 +184,23 @@
       "templates:템플릿 삽입": false,
       "command-palette:명령어 팔레트 열기": false,
       "bases:새 베이스 생성하기": false,
+      "obsidian42-brat:BRAT": false,
+      "obsidian-git:Open Git source control": false,
       "realclaudian:Open Claudian": false
     }
   },
   "active": "ffdeb66ecb59cefe",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "cdbd-design-system/컨텍스트: 이선호/2026-05-21 상품 카드 편집기·모달 정비.md",
+    "cdbd-design-system/컨텍스트: 이선호/2026-05-21 상품 카드 모달·미리보기·컴포넌트화.md",
+    "cdbd-design-system/컨텍스트: 이선호/2026-05-20 상품 카드 신규 기획.md",
+    "cdbd-design-system/컨텍스트: 이선호/2026-05-19 페이지 구조 3-10~3-15 재정비.md",
+    "cdbd-design-system/컨텍스트: 이선호/2026-05-18 디자인 시스템 통합 정비.md",
+    "cdbd-design-system/컨텍스트: 이선호/2026-05-18 데이터 관리 문서 수정.md",
+    "cdbd-design-system/컨텍스트: 이선호/2026-05-17 온보딩 문서 재구성.md",
+    "cdbd-design-system/컨텍스트: 이선호/2026-05-15 피드백 스타일 보완 작업.md",
+    "cdbd-design-system/컨텍스트: 이선호/2026-05-14 피드백 모달 작업.md",
+    "cdbd-design-system/컨텍스트: 이선호",
+    "cdbd-design-system/컨텍스트: 강현이"
+  ]
 }
