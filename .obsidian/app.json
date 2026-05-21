@@ -1,0 +1,9 @@
+{
+  "userIgnoreFilters": [
+    "cdbd-design-system/",
+    "cdbd-design-service/",
+    "cdbd-marketing/",
+    "cdbd-templates/",
+    "makevu-qrstp/"
+  ]
+}
