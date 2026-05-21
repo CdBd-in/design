@@ -173,7 +173,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 701.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -189,6 +189,6 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "ffdeb66ecb59cefe",
+  "active": "307a53f046401eb1",
   "lastOpenFiles": []
 }
