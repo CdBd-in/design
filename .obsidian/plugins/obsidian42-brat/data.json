@@ -1,6 +1,13 @@
 {
-  "pluginList": [],
-  "pluginSubListFrozenVersion": [],
+  "pluginList": [
+    "YishenTu/claudian"
+  ],
+  "pluginSubListFrozenVersion": [
+    {
+      "repo": "YishenTu/claudian",
+      "version": ""
+    }
+  ],
   "themesList": [],
   "updateAtStartup": true,
   "updateThemesAtStartup": true,
