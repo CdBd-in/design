@@ -11,10 +11,14 @@
             "id": "6493e089818a8dee",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "cdbd-marketing/블로그/썸네일 디자인 시스템.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "새 탭"
+              "title": "썸네일 디자인 시스템"
             }
           }
         ]
@@ -173,7 +177,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 701.5
+    "width": 444.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -189,7 +193,7 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "ffdeb66ecb59cefe",
+  "active": "6493e089818a8dee",
   "lastOpenFiles": [
     "MIGRATION.md",
     "cdbd-marketing/컨텍스트: 이선호/이선호-2026-05-21.md",
