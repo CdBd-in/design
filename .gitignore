@@ -7,3 +7,6 @@ makevu-qrstp/
 
 # macOS 잡파일
 .DS_Store
+
+# Claudian local settings (per-machine, should not sync)
+.claudian/
