@@ -191,6 +191,7 @@
   },
   "active": "41e770cf527e042a",
   "lastOpenFiles": [
+    "design",
     "makevu-qrstp/큐알 스탬프 홈페이지/1.260610_수정/플랜 및 이용안내 정리.md",
     "makevu-qrstp/큐알 스탬프 홈페이지/1.260610_수정/샵플랜 섹션 추가.md",
     "makevu-qrstp/큐알 스탬프 홈페이지/1.260610_수정",
@@ -235,7 +236,6 @@
     "cdbd-design-service/docs/superpowers/specs",
     "cdbd-design-service/README.md",
     "cdbd-design-service/CLAUDE.md",
-    "cdbd-design-service/AGENTS.md",
-    "cdbd-marketing/홈페이지/Wix 작업 가능범위.md"
+    "cdbd-design-service/AGENTS.md"
   ]
 }
