@@ -1,20 +1,24 @@
 {
   "main": {
-    "id": "7c3f822ca5d2861b",
+    "id": "9fc5b3d50e670cb5",
     "type": "split",
     "children": [
       {
-        "id": "8eab7edcd1ef8e82",
+        "id": "0bcb115e8209b7cd",
         "type": "tabs",
         "children": [
           {
-            "id": "98cd4117fdfe58f2",
+            "id": "6493e089818a8dee",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "ONBOARDING.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "새 탭"
+              "title": "ONBOARDING"
             }
           }
         ]
@@ -23,15 +27,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "7a0ff2bcbabbf8e4",
+    "id": "75180430ad04df1e",
     "type": "split",
     "children": [
       {
-        "id": "19179bab97bf9ce0",
+        "id": "4db25afd73d48bd1",
         "type": "tabs",
         "children": [
           {
-            "id": "85e888418c124b3e",
+            "id": "307a53f046401eb1",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -46,7 +50,7 @@
             }
           },
           {
-            "id": "a5e264bb899607f4",
+            "id": "e33068b4589e4f9f",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -63,7 +67,7 @@
             }
           },
           {
-            "id": "bed5f8c788e71b81",
+            "id": "e08bb4e65e56189c",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -79,15 +83,15 @@
     "width": 300
   },
   "right": {
-    "id": "e6dc84a937f38be0",
+    "id": "a8269292894d6232",
     "type": "split",
     "children": [
       {
-        "id": "237159cc6c2529ce",
+        "id": "56d8da195166c078",
         "type": "tabs",
         "children": [
           {
-            "id": "d74694d49d54743d",
+            "id": "ebc1690db4b1e954",
             "type": "leaf",
             "state": {
               "type": "backlink",
@@ -105,7 +109,7 @@
             }
           },
           {
-            "id": "0cdfb7431d47318f",
+            "id": "ccb511ede342e767",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
@@ -118,7 +122,7 @@
             }
           },
           {
-            "id": "717253b10bfe2df3",
+            "id": "b0d8f30cb4920c53",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -133,7 +137,7 @@
             }
           },
           {
-            "id": "17a8da03f65d5337",
+            "id": "e0331166a1c1448e",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -147,7 +151,7 @@
             }
           },
           {
-            "id": "751adde609a58df4",
+            "id": "407b7518ad56ec53",
             "type": "leaf",
             "state": {
               "type": "outline",
@@ -161,7 +165,7 @@
             }
           },
           {
-            "id": "41e770cf527e042a",
+            "id": "ffdeb66ecb59cefe",
             "type": "leaf",
             "state": {
               "type": "claudian-view",
@@ -175,69 +179,56 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 569.91796875
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian42-brat:BRAT": false,
-      "obsidian-git:Open Git source control": false,
-      "realclaudian:Open Claudian": false,
       "switcher:빠른 전환기 열기": false,
       "graph:그래프 뷰 열기": false,
       "canvas:새 캔버스 만들기": false,
       "daily-notes:오늘의 일일 노트 열기": false,
       "templates:템플릿 삽입": false,
       "command-palette:명령어 팔레트 열기": false,
-      "bases:새 베이스 생성하기": false
+      "bases:새 베이스 생성하기": false,
+      "obsidian42-brat:BRAT": false,
+      "obsidian-git:Open Git source control": false,
+      "realclaudian:Open Claudian": false
     }
   },
-  "active": "41e770cf527e042a",
+  "active": "6493e089818a8dee",
   "lastOpenFiles": [
+    "cdbd-marketing/컨텍스트: 강현이/블로그 이미지 만들기-시작방법.md",
+    "MIGRATION.md",
+    "makevu-qrstp/컨텍스트: 강현이/2026-07-10.md",
+    "makevu-qrstp/컨텍스트: 강현이/2026-06-25.md",
+    "makevu-qrstp/컨텍스트: 강현이/2026-06-30.md",
+    "makevu-qrstp/컨텍스트: 강현이/2026-07-07-1.md",
+    "makevu-qrstp/컨텍스트: 강현이/2026-07-09.md",
+    "makevu-qrstp/컨텍스트: 강현이/2026-07-08.md",
+    "makevu-qrstp/컨텍스트: 강현이/2026-07-07.md",
+    "cdbd-marketing/컨텍스트: 강현이/2026-05-21.md",
+    "cdbd-marketing/컨텍스트: 강현이/2026-05-31.md",
+    "cdbd-marketing/컨텍스트: 강현이/2026-05-29-2.md",
+    "cdbd-marketing/컨텍스트: 강현이/2026-06-01.md",
+    "cdbd-marketing/컨텍스트: 강현이/2026-06-11.md",
+    "cdbd-marketing/컨텍스트: 강현이/2026-06-13-3.md",
+    "cdbd-marketing/컨텍스트: 강현이/2026-06-13-2.md",
+    "cdbd-marketing/컨텍스트: 강현이/2026-05-29.md",
+    "cdbd-marketing/컨텍스트: 강현이/2026-06-13.md",
+    "cdbd-marketing/컨텍스트: 강현이/2026-06-19.md",
+    "cdbd-marketing/컨텍스트: 강현이/2026-05-31-2.md",
+    "cdbd-marketing/컨텍스트: 강현이/2026-05-26.md",
+    "cdbd-marketing/컨텍스트: 강현이/2026-07-16.md",
+    "cdbd-marketing/컨텍스트: 강현이/2026-06-18.md",
+    "cdbd-marketing/컨텍스트: 강현이/2026-05-22.md",
+    "cdbd-marketing/컨텍스트: 강현이/2026-06-01-2.md",
+    "cdbd-marketing/컨텍스트: 이선호/2026-06-23.md",
     "design",
-    "makevu-qrstp/큐알 스탬프 홈페이지/1.260610_수정/플랜 및 이용안내 정리.md",
-    "makevu-qrstp/큐알 스탬프 홈페이지/1.260610_수정/샵플랜 섹션 추가.md",
-    "makevu-qrstp/큐알 스탬프 홈페이지/1.260610_수정",
-    "makevu-qrstp/큐알 스탬프 홈페이지",
-    "makevu-qrstp/README.md",
-    "makevu-qrstp",
-    "cdbd-templates/README.md",
-    "cdbd-templates",
-    "cdbd-design-service/컨텍스트: 이선호/2026-06-10 저장 경로 규칙 변경·CdBd 이미지 라이브러리 헬퍼 도입·PRENDANG anti-pattern 진단.md",
-    "cdbd-design-service/컨텍스트: 이선호/2026-06-09 PRENDANG 시안 CdBd 등록·갤러리 레이어 schema·default OFF 룰.md",
-    "cdbd-design-service/컨텍스트: 이선호/2026-06-05 마쥬 swp 셀 구조·행 단위 라인 수·로고 alpha 크롭.md",
-    "cdbd-design-service/컨텍스트: 이선호/2026-06-05 TISSOT CdBd 등록·자동화 인증·디자인보드 매핑 규칙.md",
-    "cdbd-design-service/컨텍스트: 이선호/2026-06-04 화보 결정 트리·마쥬 12프레임 + TISSOT mg3 자동화.md",
-    "cdbd-design-service/컨텍스트: 이선호/2026-06-01.md",
-    "cdbd-design-service/컨텍스트: 이선호/2026-05-29.md",
-    "cdbd-design-service/컨텍스트: 이선호/2026-05-28.md",
-    "cdbd-design-service/컨텍스트: 이선호",
-    "cdbd-design-service/룩북/참조 이미지/ref-표지-thick-frame.png",
-    "cdbd-design-service/룩북/참조 이미지/ref-표지-frame-01.png",
-    "cdbd-design-service/룩북/참조 이미지/ref-표지-clean-01.png",
-    "cdbd-design-service/룩북/참조 이미지/ref-그리드-swp.png",
-    "cdbd-design-service/룩북/참조 이미지/ref-그리드-scl.png",
-    "cdbd-design-service/룩북/참조 이미지/ref-michaa-basic-link-june.png",
-    "cdbd-design-service/룩북/참조 이미지/ref-michaa-basic-link-dec.png",
-    "cdbd-design-service/룩북/참조 이미지/ref-cdbd-23-url-modal.png",
-    "cdbd-design-service/룩북/참조 이미지/ref-cdbd-22-page-bg.png",
-    "cdbd-design-service/룩북/참조 이미지/ref-cdbd-21-page-kebab.png",
-    "cdbd-design-service/룩북/2. 디자인 가이드/2-5. 매장 정보.md",
-    "cdbd-design-service/룩북/2. 디자인 가이드/2-4. 화보·상품.md",
-    "cdbd-design-service/룩북/2. 디자인 가이드/2-3. 브랜드·컬렉션 소개.md",
-    "cdbd-design-service/룩북/2. 디자인 가이드/2-2. 표지.md",
-    "cdbd-design-service/룩북/2. 디자인 가이드/2-1. 공통.md",
-    "cdbd-design-service/룩북/1. 제작 프로세스/1-4. CdBd 콘텐츠.md",
-    "cdbd-design-service/룩북/1. 제작 프로세스/1-3. 초안.md",
-    "cdbd-design-service/룩북/1. 제작 프로세스/1-2. 시안.md",
-    "cdbd-design-service/룩북/1. 제작 프로세스/1-1. 공통.md",
-    "cdbd-design-service/룩북/참조 이미지",
-    "cdbd-design-service/룩북/2. 디자인 가이드",
-    "cdbd-design-service/룩북/1. 제작 프로세스",
-    "cdbd-design-service/룩북",
-    "cdbd-design-service/docs/superpowers/specs/2026-06-04-figma-ai-bridge-design.md",
-    "cdbd-design-service/docs/superpowers/specs",
-    "cdbd-design-service/README.md",
-    "cdbd-design-service/CLAUDE.md",
-    "cdbd-design-service/AGENTS.md"
+    "cdbd-marketing/컨텍스트: 이선호",
+    "cdbd-marketing/컨텍스트: 강현이",
+    "cdbd-marketing/이선호",
+    "cdbd-marketing/강현이",
+    "cdbd-design-system/컨텍스트: 이선호",
+    "cdbd-design-system/컨텍스트: 강현이"
   ]
 }
