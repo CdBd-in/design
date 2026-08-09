@@ -175,7 +175,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 600.3203125
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -191,7 +191,7 @@
       "bases:새 베이스 생성하기": false
     }
   },
-  "active": "85e888418c124b3e",
+  "active": "41e770cf527e042a",
   "lastOpenFiles": [
     "makevu-qrstp/큐알스탬프 소개서/QR솔루션_소개서_v11.key",
     "makevu-qrstp/큐알스탬프 소개서/QR솔루션_소개서_v11.pptx",
