@@ -34,19 +34,9 @@
               "icon": "lucide-file",
               "title": "CdBd 문서 체계 진단 — 발표 대본"
             }
-          },
-          {
-            "id": "847aa2bb6ec9f1cf",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "새 탭"
-            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -220,7 +210,7 @@
       "bases:새 베이스 생성하기": false
     }
   },
-  "active": "847aa2bb6ec9f1cf",
+  "active": "41e770cf527e042a",
   "lastOpenFiles": [
     "CdBd 문서 체계 진단 — 발표 대본.md",
     "CdBd 문서 체계 진단 및 개편 제안.md",
