@@ -206,8 +206,9 @@
       "bases:새 베이스 생성하기": false
     }
   },
-  "active": "0d2abb90a7a4229f",
+  "active": "41e770cf527e042a",
   "lastOpenFiles": [
+    "CdBd 문서 체계 진단 — 발표 대본.md",
     "CdBd 문서 체계 진단 및 개편 제안.md",
     "CdBd 문서 체계 진단 및 개편 제안.pptx",
     "makevu-qrstp/큐알스탬프 소개서/QR솔루션_소개서_v11.key",
@@ -252,7 +253,6 @@
     "cdbd-design-service/룩북/1. 제작 프로세스/1-1. 공통.md",
     "cdbd-design-service/docs/superpowers/specs/2026-06-04-figma-ai-bridge-design.md",
     "cdbd-design-service/README.md",
-    "cdbd-design-service/CLAUDE.md",
-    "cdbd-design-service/AGENTS.md"
+    "cdbd-design-service/CLAUDE.md"
   ]
 }
