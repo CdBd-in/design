@@ -20,8 +20,19 @@
               "icon": "lucide-file",
               "title": "CdBd 문서 체계 진단 및 개편 제안"
             }
+          },
+          {
+            "id": "0d2abb90a7a4229f",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "새 탭"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -195,7 +206,7 @@
       "bases:새 베이스 생성하기": false
     }
   },
-  "active": "98cd4117fdfe58f2",
+  "active": "0d2abb90a7a4229f",
   "lastOpenFiles": [
     "CdBd 문서 체계 진단 및 개편 제안.md",
     "CdBd 문서 체계 진단 및 개편 제안.pptx",
