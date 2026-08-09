@@ -90,9 +90,19 @@
               "icon": "lucide-file",
               "title": "CdBd 문서 체계 진단 — 발표 대본"
             }
+          },
+          {
+            "id": "ff701b7659e6de8a",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "새 탭"
+            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -266,7 +276,7 @@
       "bases:새 베이스 생성하기": false
     }
   },
-  "active": "401d8b86032f01f6",
+  "active": "ff701b7659e6de8a",
   "lastOpenFiles": [
     "CdBd 문서 체계 진단 — 발표 대본.md",
     "cdbd-templates/컨텍스트: 이선호/2026-08-07 AI 유저 플로우 Figma 시안 대량 반복 — 그레이스케일 플로우·대화형·묶음·인디케이터 .md",
