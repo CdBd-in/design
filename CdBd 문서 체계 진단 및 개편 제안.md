@@ -439,6 +439,9 @@ description: 룩북 시안 8P 제작. TRIGGER — "룩북 시안 만들어줘",
 /plugin marketplace add CdBd-in/cdbd-plugin
 ```
 
+> 📎 **실제로 어떻게 만드는지는 「부록 B. D안 실행 방법」** 을 보세요 —
+> 저장소 구조 · 필요한 파일 2개 · 설치 명령 · 실행 순서가 정리돼 있습니다.
+
 ---
 
 ### 적용하면 구조가 이렇게 바뀝니다
@@ -564,3 +567,118 @@ GitHub API 파일 목록 조회                          →  성공 (전체 구
   커밋된 결과입니다. (`cdbd-marketing/.temp/` 133장은 `.gitignore`에도 없습니다.)
 
 ---
+
+---
+
+## 부록 B. D안 실행 방법 — `cdbd-plugin` 저장소 만들기
+
+> 아래 구조·명령은 **이 컴퓨터에 설치된 Anthropic 공식 마켓플레이스(`claude-plugins-official`)를
+> 직접 열어 확인한 것**입니다. 추정이 아닙니다.
+
+### B-1. 만들 것 — GitHub 저장소 1개
+
+`CdBd-in/cdbd-plugin` 저장소 하나가 **마켓플레이스 겸 플러그인** 역할을 합니다.
+
+```
+cdbd-plugin/                              ← GitHub 저장소
+├── .claude-plugin/
+│   └── marketplace.json                  ← 마켓플레이스 정의 (필수)
+└── plugins/
+    └── cdbd/                             ← 플러그인 본체
+        ├── .claude-plugin/
+        │   └── plugin.json               ← 플러그인 정보 (필수)
+        ├── skills/                       ← 스킬
+        │   ├── blog-thumbnail/SKILL.md
+        │   ├── lookbook-draft/SKILL.md
+        │   └── qr-event/SKILL.md
+        ├── agents/                       ← 서브에이전트 (선택)
+        ├── commands/                     ← 슬래시 명령 (선택)
+        ├── .mcp.json                     ← Figma MCP 연결 설정 (선택)
+        └── README.md
+```
+
+### B-2. 새로 써야 하는 파일은 2개뿐
+
+**`.claude-plugin/marketplace.json`**
+
+```json
+{
+  "name": "cdbd-plugin",
+  "description": "CdBd 디자인팀 공용 스킬",
+  "owner": { "name": "CdBd", "email": "help@cdbd.in" },
+  "plugins": [
+    {
+      "name": "cdbd",
+      "description": "CdBd 디자인 작업 스킬 모음",
+      "author": { "name": "CdBd", "email": "help@cdbd.in" },
+      "source": "./plugins/cdbd"
+    }
+  ]
+}
+```
+
+**`plugins/cdbd/.claude-plugin/plugin.json`**
+
+```json
+{
+  "name": "cdbd",
+  "description": "CdBd 디자인 작업 스킬 모음",
+  "version": "1.0.0",
+  "author": { "name": "CdBd", "email": "help@cdbd.in" }
+}
+```
+
+나머지는 **기존 스킬 폴더를 그대로 복사**해 넣으면 됩니다. `SKILL.md` 형식은 지금 쓰는 것과
+동일합니다.
+
+`.mcp.json`(Figma 연결)은 이런 형태입니다.
+
+```json
+{
+  "figma": { "type": "http", "url": "https://..." }
+}
+```
+
+### B-3. 팀원이 하는 일 — 명령 2줄
+
+```
+/plugin marketplace add CdBd-in/cdbd-plugin
+/plugin install cdbd@cdbd-plugin
+```
+
+한 번만 치면 끝입니다. 이후 저장소에 push하면 팀원 쪽에 반영됩니다.
+(`/plugin > Discover` 메뉴에서 찾아 설치할 수도 있습니다.)
+
+### B-4. 실행 순서
+
+| 단계 | 할 일 | 예상 시간 |
+|---|---|---|
+| 1 | GitHub에 `cdbd-plugin` 저장소 생성 (**private 권장**) | 5분 |
+| 2 | `marketplace.json` · `plugin.json` 작성 | 10분 |
+| 3 | `~/.claude/skills/blog-thumbnail` 이관 + **깨진 링크 6개 수정** | 30분 |
+| 4 | 이선호님 컴퓨터에서 설치·동작 확인 | 10분 |
+| 5 | `.mcp.json`에 Figma 연결 추가 | 15분 |
+| 6 | **강현이님 컴퓨터에서 설치 → 다른 컴퓨터에서도 되는지 검증** | 10분 |
+| 7 | 나머지 스킬을 하나씩 추가 | 이후 계속 |
+
+> **4번과 6번이 핵심입니다.** 목표가 *"팀원 누구 컴퓨터에서든 동작"* 이므로,
+> **6번에서 실제로 확인되기 전까지는 성공이 아닙니다.**
+
+### B-5. 주의할 점 두 가지
+
+**① 스킬은 얇게 만듭니다.**
+정본 문서 내용을 플러그인에 복사하면 볼트 문서와 또 갈라집니다.
+지금 `blog-thumbnail`이 겪은 실패가 정확히 그것입니다(폴더 재편 때 참조 6개 전부 깨짐).
+
+```markdown
+---
+name: lookbook-draft
+description: 룩북 시안 8P 제작. TRIGGER — "룩북 시안 만들어줘"
+---
+1. 먼저 [[룩북/1. 제작 프로세스/1-2. 시안.md]] 전문을 읽는다   ← 가리키기만
+```
+
+**② 저장소는 private로 만듭니다.**
+스킬 안에 고객사명이나 내부 절차가 들어갈 수 있습니다. 플러그인 설치는 private 저장소도
+됩니다(팀 계정이 접근 권한을 가지므로).
+
