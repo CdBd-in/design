@@ -76,9 +76,19 @@
               "icon": "lucide-file",
               "title": "_기능별 경로 가이드 — 실행 계획"
             }
+          },
+          {
+            "id": "261879500bf75031",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "새 탭"
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -252,12 +262,12 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "7736868f94f9df7a",
+  "active": "261879500bf75031",
   "lastOpenFiles": [
-    "CdBd 기능 목록 상세.md",
-    "_기능별 경로 가이드 — 실행 계획.md",
-    "_CdBd 기능 커버리지 (경로 가이드 상세).md",
     "~$_기능별 경로 가이드 — 실행 계획.pptx",
+    "_기능별 경로 가이드 — 실행 계획.md",
+    "CdBd 기능 목록 상세.md",
+    "_CdBd 기능 커버리지 (경로 가이드 상세).md",
     "cdbd-design-service/CLAUDE.md",
     "_기능별 경로 가이드 — 실행 계획.pptx",
     "~$_기능별 문서 위치 — 실행 계획.pptx",
@@ -288,7 +298,6 @@
     "makevu-qrstp/컨텍스트: 강현이/2026-06-30.md",
     "makevu-qrstp/컨텍스트: 강현이/2026-07-07-1.md",
     "makevu-qrstp/컨텍스트: 강현이/2026-07-09.md",
-    "makevu-qrstp/컨텍스트: 강현이/2026-07-08.md",
-    "makevu-qrstp/컨텍스트: 강현이/2026-07-07.md"
+    "makevu-qrstp/컨텍스트: 강현이/2026-07-08.md"
   ]
 }
