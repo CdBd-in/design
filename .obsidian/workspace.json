@@ -250,7 +250,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 612.59765625
+    "width": 585.54296875
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -266,7 +266,7 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "261879500bf75031",
+  "active": "ffdeb66ecb59cefe",
   "lastOpenFiles": [
     "_기능별 경로 가이드 — 실행 계획.md",
     "~$_기능별 경로 가이드 — 실행 계획.pptx",
