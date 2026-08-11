@@ -134,13 +134,13 @@ s.addShape(p.ShapeType.roundRect, { x: M, y: 2.4, w: RIGHT - M, h: 1.4, fill: { 
 s.addText([
   { text: "각 저장소/\n", options: { color: C.ON_DARK_ACCENT, fontFace: F.semi } },
   { text: "├─ CLAUDE.md            ", options: { color: "FFFFFF", fontFace: F.reg } },
-  { text: "← 맨 위에 \"작업 전 _기능별 경로 가이드.md 읽어라\" 1줄\n", options: { color: C.WMUTE, fontFace: F.reg } },
+  { text: "← 맨 위에 @import(@_기능별 경로 가이드.md) 로 자동 로드\n", options: { color: C.WMUTE, fontFace: F.reg } },
   { text: "└─ _기능별 경로 가이드.md    ", options: { color: "FFFFFF", fontFace: F.reg } },
   { text: "← 이 저장소의 기능 → 파일 매핑", options: { color: C.WMUTE, fontFace: F.reg } },
 ], { x: M + 0.35, y: 2.56, w: RIGHT - M - 0.7, h: 1.1, valign: "middle", fontSize: 12, lineSpacingMultiple: 1.35, margin: 0 });
 [
   "Claude에게 위키링크는 ‘클릭’이 아니라 그냥 글자 — 스스로 열지 않는다.",
-  "CLAUDE.md는 폴더 열 때 자동으로 읽는 유일한 파일 → 여기서 가리켜야 읽힌다.",
+  "CLAUDE.md에 @import(@_기능별 경로 가이드.md)로 걸면 매 세션 강제 로드 — 포인터의 ‘안 읽을 위험’ 제거.",
   "그 볼트에서 일하면 Claude가 파일을 바로 찾는다. (볼트 간 링크는 작동 안 함 → 저장소 안에 self-contained)",
 ].forEach((t, i) => {
   const y = 4.1 + i * 0.5;
@@ -261,17 +261,21 @@ s.addText([
   { text: "     └─ 기능별 경로 가이드(공통) · 브랜드 토큰", options: { color: "FFFFFF", fontFace: F.reg } },
 ], { x: M + 0.35, y: 2.54, w: RIGHT - M - 0.7, h: 1.7, valign: "middle", fontSize: 11.5, lineSpacingMultiple: 1.28, margin: 0 });
 const bw = (RIGHT - M - 0.4) / 2;
-s.addShape(p.ShapeType.roundRect, { x: M, y: 4.55, w: bw, h: 1.95, fill: { color: C.PARCH }, line: { color: C.HAIR, width: 1 }, rectRadius: 0.1 });
+s.addShape(p.ShapeType.roundRect, { x: M, y: 4.55, w: bw, h: 1.68, fill: { color: C.PARCH }, line: { color: C.HAIR, width: 1 }, rectRadius: 0.1 });
 s.addText("새로 만드는 것", { x: M + 0.3, y: 4.7, w: bw - 0.6, h: 0.32, fontFace: F.semi, fontSize: 13, color: C.INK, margin: 0 });
 s.addText("· GitHub 저장소 1개 (private 권장)\n· 새 파일 2개: marketplace.json · plugin.json\n· 나머지는 기존 스킬·도구를 그대로 복사\n· 깨진 링크 정리 + 브랜드 토큰 동봉",
   { x: M + 0.3, y: 5.08, w: bw - 0.6, h: 1.35, valign: "top", fontFace: F.reg, fontSize: 11.5, color: C.BODY, lineSpacingMultiple: 1.4, margin: 0 });
-s.addShape(p.ShapeType.roundRect, { x: M + bw + 0.4, y: 4.55, w: bw, h: 1.95, fill: { color: C.ATINT }, line: { type: "none" }, rectRadius: 0.1 });
+s.addShape(p.ShapeType.roundRect, { x: M + bw + 0.4, y: 4.55, w: bw, h: 1.68, fill: { color: C.ATINT }, line: { type: "none" }, rectRadius: 0.1 });
 s.addText("팀원 설치 (1회)", { x: M + bw + 0.7, y: 4.7, w: bw - 0.6, h: 0.32, fontFace: F.semi, fontSize: 13, color: C.ACCENT, margin: 0 });
 s.addText([
   { text: "/plugin marketplace add CdBd-in/cdbd-plugin\n", options: { fontFace: F.med, fontSize: 11.5, color: C.INK } },
   { text: "/plugin install cdbd@cdbd-plugin\n", options: { fontFace: F.med, fontSize: 11.5, color: C.INK } },
   { text: "→ 어느 볼트·맨 바깥에서도 로드 · 자동 최신화", options: { fontFace: F.reg, fontSize: 11.5, color: C.BODY } },
-], { x: M + bw + 0.7, y: 5.08, w: bw - 0.6, h: 1.35, valign: "top", lineSpacingMultiple: 1.5, margin: 0 });
+], { x: M + bw + 0.7, y: 5.08, w: bw - 0.6, h: 1.15, valign: "top", lineSpacingMultiple: 1.5, margin: 0 });
+s.addText([
+  { text: "플러그인이 못 담는 것 — 로그인 정보  ", options: { fontFace: F.semi, fontSize: 11.5, color: C.ACCENT } },
+  { text: "→ ONBOARDING에 ‘Claude 셋업’ 챕터 + .env.example로 안내 (비밀 값은 각자 로컬).", options: { fontFace: F.reg, fontSize: 11.5, color: C.BODY } },
+], { x: M, y: 6.4, w: RIGHT - M, h: 0.35, valign: "middle", margin: 0 });
 
 /* 15. 다음 액션 (상세) */
 s = D.content(p, { eyebrow: "다음 액션", chapter: "09  누가 · 무엇을 · 지금", title: "이렇게 진행합니다",
