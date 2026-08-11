@@ -62,9 +62,19 @@
               "icon": "lucide-file",
               "title": "_기능별 경로 가이드 — 실행 계획"
             }
+          },
+          {
+            "id": "7736868f94f9df7a",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "새 탭"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -238,11 +248,11 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "4de507383aec385c",
+  "active": "7736868f94f9df7a",
   "lastOpenFiles": [
     "~$_기능별 경로 가이드 — 실행 계획.pptx",
-    "cdbd-design-service/CLAUDE.md",
     "_기능별 경로 가이드 — 실행 계획.md",
+    "cdbd-design-service/CLAUDE.md",
     "_기능별 경로 가이드 — 실행 계획.pptx",
     "~$_기능별 문서 위치 — 실행 계획.pptx",
     "_문서 경로 가이드 — 실행 계획.md",
@@ -260,7 +270,6 @@
     "cdbd-marketing/3. 소개서/1. 스킬/cdbd-ppt-generator/design-system.md",
     "CdBd 문서 체계 진단 및 개편 제안.md",
     "_기능 안내판 실행 계획.pptx",
-    "_build_plan_ppt.py",
     "cdbd-templates/컨텍스트: 이선호/2026-08-07 AI 유저 플로우 Figma 시안 대량 반복 — 그레이스케일 플로우·대화형·묶음·인디케이터 .md",
     "cdbd-marketing/3. 소개서/1. 스킬/README.md",
     "makevu-qrstp/큐알스탬프 소개서/2607_소개서 리뉴얼 구조안.md",
