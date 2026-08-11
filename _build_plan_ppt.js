@@ -154,7 +154,7 @@ s.addText([
 s.addShape(p.ShapeType.roundRect, { x: M, y: 5.75, w: RIGHT - M, h: 0.85, fill: { color: C.ATINT }, line: { type: "none" }, rectRadius: 0.1 });
 s.addText([
   { text: "‘아무 볼트에서나’ 되게 하려면?  ", options: { fontFace: F.semi, fontSize: 12.5, color: C.ACCENT } },
-  { text: "각 저장소 안내판은 그 볼트에서 작동. 어느 볼트·맨 바깥에서 켜도 되게 하려면 → 플러그인 배포(진단서 D안, 이후 단계).", options: { fontFace: F.reg, fontSize: 12, color: C.BODY } },
+  { text: "각 저장소 안내판은 그 볼트에서 작동. 어느 볼트·맨 바깥에서 켜도 되게 하려면 → 플러그인 배포(진단서 D안) = 실행 순서 7단계.", options: { fontFace: F.reg, fontSize: 12, color: C.BODY } },
 ], { x: M + 0.3, y: 5.85, w: RIGHT - M - 0.6, h: 0.65, valign: "middle", lineSpacingMultiple: 1.3, margin: 0 });
 
 /* 10. 실행 순서 */
@@ -166,7 +166,8 @@ const steps = [
   ["3  안내판 1곳", "저장소 1개만 골라 기능→정확한 파일·섹션 확정 + 경로 검증", "0.5일"],
   ["4  연결", "그 저장소 CLAUDE.md에 ‘안내판 먼저 읽어라’ 1줄", "5분"],
   ["5  검증", "\"○○ 해줘\" → Claude가 안내판 보고 올바른 파일 여는지 테스트", "10분"],
-  ["6  확산 & 스킬", "작동 확인되면 나머지 저장소 복제 · 고빈도만 얇은 스킬", "이후"],
+  ["6  확산 & 스킬", "나머지 저장소에 복제 · 고빈도만 얇은 스킬로 승격", "이후"],
+  ["7  플러그인 배포", "안내판·스킬·도구를 묶어 어느 볼트·맨 바깥에서도 로드 (진단서 D안)", "이후"],
 ];
 const head10 = ["단계", "무엇을 · 왜", "소요"].map(t => ({ text: t, options: { fill: { color: C.INK }, color: "FFFFFF", fontFace: F.semi, fontSize: 12.5, valign: "middle" } }));
 const body10 = steps.map((r, i) => {
@@ -177,7 +178,11 @@ const body10 = steps.map((r, i) => {
     { text: r[2], options: { fill: { color: fill }, color: C.MUTED, fontFace: F.med, fontSize: 12, align: "center" } },
   ];
 });
-s.addTable([head10, ...body10], { x: M, y: 2.55, w: RIGHT - M, colW: [2.35, 7.68, 1.6], border: { type: "solid", pt: 0.5, color: C.HAIR }, rowH: 0.52, valign: "middle", margin: [3, 8, 3, 8] });
+s.addTable([head10, ...body10], { x: M, y: 2.5, w: RIGHT - M, colW: [2.35, 7.68, 1.6], border: { type: "solid", pt: 0.5, color: C.HAIR }, rowH: 0.5, valign: "middle", margin: [3, 8, 3, 8] });
+s.addText([
+  { text: "6~7단계 = ‘아무 볼트에서나’ 되게 하는 확장.  ", options: { fontFace: F.semi, fontSize: 12, color: C.ACCENT } },
+  { text: "1곳이 작동 확인되면 복제하고, 마지막에 플러그인으로 어디서 켜도 로드되게 만든다.", options: { fontFace: F.reg, fontSize: 12, color: C.BODY } },
+], { x: M, y: 6.4, w: RIGHT - M, h: 0.4, valign: "middle", margin: 0 });
 
 /* 11. 예시 · 과정 */
 s = D.content(p, { eyebrow: "예시 · 과정", chapter: "07  cdbd-design-service", title: "끝까지 하면 — 과정",
