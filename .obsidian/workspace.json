@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_기능 안내판 실행 계획.md",
+                "file": "cdbd-marketing/3. 소개서/1. 스킬/ppt-researcher/SKILL.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "_기능 안내판 실행 계획"
+              "title": "SKILL"
             }
           }
         ],
@@ -210,21 +210,21 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "ffdeb66ecb59cefe",
+  "active": "d6c9f532684f4287",
   "lastOpenFiles": [
-    "~$_기능 안내판 실행 계획.pptx",
+    "cdbd-marketing/3. 소개서/1. 스킬/ppt-researcher/brief-template.md",
+    "cdbd-marketing/3. 소개서/1. 스킬/cdbd-ppt-generator/SKILL.md",
+    "cdbd-marketing/3. 소개서/1. 스킬/cdbd-ppt-generator/design-system.md",
     "_기능 안내판 실행 계획.md",
+    "~$_기능 안내판 실행 계획.pptx",
     "CdBd 문서 체계 진단 및 개편 제안.md",
     "_기능 안내판 실행 계획.pptx",
     "_build_plan_ppt.py",
     "cdbd-templates/컨텍스트: 이선호/2026-08-07 AI 유저 플로우 Figma 시안 대량 반복 — 그레이스케일 플로우·대화형·묶음·인디케이터 .md",
     "cdbd-marketing/3. 소개서/1. 스킬/ppt-researcher/ppt-researcher.skill",
-    "cdbd-marketing/3. 소개서/1. 스킬/ppt-researcher/brief-template.md",
     "cdbd-marketing/3. 소개서/1. 스킬/ppt-researcher/SKILL.md",
-    "cdbd-marketing/3. 소개서/1. 스킬/cdbd-ppt-generator/design-system.md",
     "cdbd-marketing/3. 소개서/1. 스킬/cdbd-ppt-generator/cdbd_deck.js",
     "cdbd-marketing/3. 소개서/1. 스킬/cdbd-ppt-generator/cdbd-ppt-generator.skill",
-    "cdbd-marketing/3. 소개서/1. 스킬/cdbd-ppt-generator/SKILL.md",
     "cdbd-marketing/3. 소개서/1. 스킬/ppt-researcher",
     "cdbd-marketing/3. 소개서/1. 스킬/cdbd-ppt-generator",
     "cdbd-marketing/3. 소개서/1. 스킬/README.md",
