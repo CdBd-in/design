@@ -34,23 +34,9 @@
               "icon": "lucide-file",
               "title": "SKILL"
             }
-          },
-          {
-            "id": "47bfb82f2b22ffcd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_기능 안내판 실행 계획.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "_기능 안내판 실행 계획"
-            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -224,8 +210,9 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "47bfb82f2b22ffcd",
+  "active": "ffdeb66ecb59cefe",
   "lastOpenFiles": [
+    "_기능별 문서 위치 — 실행 계획.pptx",
     "~$_기능 안내판 실행 계획.pptx",
     "_build_plan_ppt.js",
     "_build_plan_ppt.js.tmp.82789.444b47e316d9",
@@ -244,7 +231,6 @@
     "cdbd-marketing/3. 소개서/1. 스킬/ppt-researcher",
     "cdbd-marketing/3. 소개서/1. 스킬/cdbd-ppt-generator",
     "cdbd-marketing/3. 소개서/1. 스킬/README.md",
-    "cdbd-marketing/3. 소개서/1. 스킬",
     "makevu-qrstp/큐알스탬프 소개서/2607_소개서 리뉴얼 구조안.md",
     "CdBd 문서 체계 진단 — 발표 대본.md",
     "ONBOARDING.md",
