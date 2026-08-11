@@ -119,11 +119,13 @@ s.addShape(p.ShapeType.roundRect, { x: M, y: 2.45, w: RIGHT - M, h: 2.6, fill: {
 s.addText("영상(녹화) 권장 — ○ 없음 대부분", { x: M + 0.35, y: 2.62, w: RIGHT - M - 0.7, h: 0.35, fontFace: F.semi, fontSize: 14, color: C.ACCENT, margin: 0 });
 s.addText("· 페이지 통계 · URL 통계 (방문·클릭·응답·예약·구독)\n· 데이터 연결(개인화) — 고객 데이터 병합\n· 버전 기록 · 공유 복제\n· 내 페이지 관리 · 어드민 운영 설정\n· 계정 · 내 주소 · 요금(결제) · 권한",
   { x: M + 0.35, y: 3.08, w: RIGHT - M - 0.7, h: 1.85, valign: "top", fontFace: F.reg, fontSize: 13, color: C.BODY, lineSpacingMultiple: 1.5, margin: 0 });
-s.addShape(p.ShapeType.roundRect, { x: M, y: 5.3, w: RIGHT - M, h: 1.15, fill: { color: C.TILE }, line: { type: "none" }, rectRadius: 0.1 });
+s.addShape(p.ShapeType.roundRect, { x: M, y: 5.2, w: RIGHT - M, h: 1.3, fill: { color: C.TILE }, line: { type: "none" }, rectRadius: 0.1 });
 s.addText([
-  { text: "형식 안내  ", options: { fontFace: F.semi, fontSize: 12.5, color: C.ON_DARK_ACCENT } },
-  { text: "영상 파일을 주시면 제가 프레임(정지화면)으로 뽑아 읽습니다. 화면은 보지만 음성(내레이션)은 못 들으니, 핵심 동작이 화면에 보이게(또는 자막) 녹화해 주세요.", options: { fontFace: F.reg, fontSize: 12, color: "FFFFFF" } },
-], { x: M + 0.3, y: 5.42, w: RIGHT - M - 0.6, h: 0.92, valign: "middle", lineSpacingMultiple: 1.35, margin: 0 });
+  { text: "채우는 원칙  ", options: { fontFace: F.semi, fontSize: 12, color: C.ON_DARK_ACCENT } },
+  { text: "팀이 실제 쓰는 기능만 문서화 — 안 쓰는 기능(예: 데이터 연결=고객별 개인화)은 ○인 채로 둔다.\n", options: { fontFace: F.reg, fontSize: 11.5, color: "FFFFFF" } },
+  { text: "영상 형식  ", options: { fontFace: F.semi, fontSize: 12, color: C.ON_DARK_ACCENT } },
+  { text: "영상을 주시면 프레임으로 뽑아 읽습니다(화면만, 음성 제외). 핵심 화면을 캡처해 주세요.", options: { fontFace: F.reg, fontSize: 11.5, color: "FFFFFF" } },
+], { x: M + 0.3, y: 5.3, w: RIGHT - M - 0.6, h: 1.08, valign: "middle", lineSpacingMultiple: 1.3, margin: 0 });
 
 /* 9. 기능별 경로 가이드 — 설계와 원리 */
 s = D.content(p, { eyebrow: "설계", chapter: "05  기능별 경로 가이드 — 설계와 원리", title: "저장소마다 살아있는 index",
