@@ -48,9 +48,19 @@
               "icon": "lucide-file",
               "title": "CLAUDE"
             }
+          },
+          {
+            "id": "4de507383aec385c",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "새 탭"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -224,8 +234,10 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "df771feb1d68d521",
+  "active": "4de507383aec385c",
   "lastOpenFiles": [
+    "~$_기능별 경로 가이드 — 실행 계획.pptx",
+    "cdbd-design-service/CLAUDE.md",
     "_기능별 경로 가이드 — 실행 계획.md",
     "_기능별 경로 가이드 — 실행 계획.pptx",
     "~$_기능별 문서 위치 — 실행 계획.pptx",
@@ -259,8 +271,6 @@
     "makevu-qrstp/컨텍스트: 강현이/2026-07-09.md",
     "makevu-qrstp/컨텍스트: 강현이/2026-07-08.md",
     "makevu-qrstp/컨텍스트: 강현이/2026-07-07.md",
-    "cdbd-marketing/컨텍스트: 강현이/2026-05-21.md",
-    "cdbd-marketing/컨텍스트: 강현이/2026-05-31.md",
-    "cdbd-marketing/컨텍스트: 강현이/2026-05-29-2.md"
+    "cdbd-marketing/컨텍스트: 강현이/2026-05-21.md"
   ]
 }
