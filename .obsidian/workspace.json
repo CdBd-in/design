@@ -20,8 +20,19 @@
               "icon": "lucide-file",
               "title": "CdBd 문서 체계 진단 및 개편 제안"
             }
+          },
+          {
+            "id": "d6c9f532684f4287",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "새 탭"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -195,8 +206,11 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "ffdeb66ecb59cefe",
+  "active": "d6c9f532684f4287",
   "lastOpenFiles": [
+    "~$_기능 안내판 실행 계획.pptx",
+    "CdBd 문서 체계 진단 및 개편 제안.md",
+    "_기능 안내판 실행 계획.md",
     "_기능 안내판 실행 계획.pptx",
     "_build_plan_ppt.py",
     "cdbd-templates/컨텍스트: 이선호/2026-08-07 AI 유저 플로우 Figma 시안 대량 반복 — 그레이스케일 플로우·대화형·묶음·인디케이터 .md",
@@ -213,11 +227,9 @@
     "cdbd-marketing/3. 소개서/1. 스킬",
     "cdbd-marketing/3. 소개서",
     "makevu-qrstp/큐알스탬프 소개서/QR솔루션_소개서_v15.pptx",
-    "makevu-qrstp/큐알스탬프 소개서/QR솔루션_소개서_v15.key",
     "makevu-qrstp/큐알스탬프 소개서/2607_소개서 리뉴얼 구조안.md",
     "CdBd 문서 체계 진단 — 발표 대본.md",
     "ONBOARDING.md",
-    "CdBd 문서 체계 진단 및 개편 제안.md",
     "cdbd-marketing/컨텍스트: 강현이/블로그 이미지 만들기-시작방법.md",
     "MIGRATION.md",
     "makevu-qrstp/컨텍스트: 강현이/2026-07-10.md",
@@ -231,7 +243,6 @@
     "cdbd-marketing/컨텍스트: 강현이/2026-05-31.md",
     "cdbd-marketing/컨텍스트: 강현이/2026-05-29-2.md",
     "cdbd-marketing/컨텍스트: 강현이/2026-06-01.md",
-    "cdbd-marketing/컨텍스트: 강현이/2026-06-11.md",
-    "cdbd-marketing/컨텍스트: 강현이/2026-06-13-3.md"
+    "cdbd-marketing/컨텍스트: 강현이/2026-06-11.md"
   ]
 }
