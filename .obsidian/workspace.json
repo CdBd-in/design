@@ -34,9 +34,19 @@
               "icon": "lucide-file",
               "title": "SKILL"
             }
+          },
+          {
+            "id": "689dfa6e57c6a078",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "새 탭"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -210,8 +220,11 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "ffdeb66ecb59cefe",
+  "active": "689dfa6e57c6a078",
   "lastOpenFiles": [
+    "~$_문서 경로 가이드 — 실행 계획.pptx",
+    "_기능 안내판 실행 계획.md",
+    "_문서 경로 가이드 — 실행 계획.md",
     "_문서 경로 가이드 — 실행 계획.pptx",
     "_기능별 문서 위치 — 실행 계획.md",
     "_기능별 문서 위치 — 실행 계획.pptx",
@@ -222,7 +235,6 @@
     "cdbd-marketing/3. 소개서/1. 스킬/ppt-researcher/brief-template.md",
     "cdbd-marketing/3. 소개서/1. 스킬/cdbd-ppt-generator/SKILL.md",
     "cdbd-marketing/3. 소개서/1. 스킬/cdbd-ppt-generator/design-system.md",
-    "_기능 안내판 실행 계획.md",
     "CdBd 문서 체계 진단 및 개편 제안.md",
     "_기능 안내판 실행 계획.pptx",
     "_build_plan_ppt.py",
@@ -230,7 +242,6 @@
     "cdbd-marketing/3. 소개서/1. 스킬/ppt-researcher/ppt-researcher.skill",
     "cdbd-marketing/3. 소개서/1. 스킬/cdbd-ppt-generator/cdbd_deck.js",
     "cdbd-marketing/3. 소개서/1. 스킬/cdbd-ppt-generator/cdbd-ppt-generator.skill",
-    "cdbd-marketing/3. 소개서/1. 스킬/ppt-researcher",
     "cdbd-marketing/3. 소개서/1. 스킬/README.md",
     "makevu-qrstp/큐알스탬프 소개서/2607_소개서 리뉴얼 구조안.md",
     "CdBd 문서 체계 진단 — 발표 대본.md",
@@ -246,7 +257,6 @@
     "makevu-qrstp/컨텍스트: 강현이/2026-07-07.md",
     "cdbd-marketing/컨텍스트: 강현이/2026-05-21.md",
     "cdbd-marketing/컨텍스트: 강현이/2026-05-31.md",
-    "cdbd-marketing/컨텍스트: 강현이/2026-05-29-2.md",
-    "cdbd-marketing/컨텍스트: 강현이/2026-06-01.md"
+    "cdbd-marketing/컨텍스트: 강현이/2026-05-29-2.md"
   ]
 }
