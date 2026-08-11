@@ -69,12 +69,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_기능별 경로 가이드 — 실행 계획.md",
+                "file": "_CdBd 기능 커버리지 (경로 가이드 상세).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "_기능별 경로 가이드 — 실행 계획"
+              "title": "_CdBd 기능 커버리지 (경로 가이드 상세)"
             }
           }
         ],
@@ -254,8 +254,9 @@
   },
   "active": "7736868f94f9df7a",
   "lastOpenFiles": [
-    "~$_기능별 경로 가이드 — 실행 계획.pptx",
     "_기능별 경로 가이드 — 실행 계획.md",
+    "_CdBd 기능 커버리지 (경로 가이드 상세).md",
+    "~$_기능별 경로 가이드 — 실행 계획.pptx",
     "cdbd-design-service/CLAUDE.md",
     "_기능별 경로 가이드 — 실행 계획.pptx",
     "~$_기능별 문서 위치 — 실행 계획.pptx",
