@@ -217,18 +217,30 @@ s.addText("· 진단서가 지적한 ‘핵심 문서 표 경로 9개 오류’ 
 /* 13. 예시 · 파일 실물 (NEW) */
 s = D.content(p, { eyebrow: "예시 · 파일 실물", chapter: "07  cdbd-design-service", title: "이 볼트의 ‘기능별 경로 가이드’는 이렇게",
   lead: "위치 = cdbd-design-service/_기능별 경로 가이드.md  (저장소 루트, CLAUDE.md 옆)", page: "13" });
-drawTable(s, 2.45, ["기능", "이렇게 말하면", "정본 파일·섹션 (검증된 경로)", "스킬화"], [
-  ["룩북 시안 제작", "\"룩북 시안 만들어줘\"", "룩북/1. 제작 프로세스/1-2. 시안.md §제작 단계 8", "후보"],
-  ["룩북 초안 제작", "\"초안 만들어줘\"", "룩북/1. 제작 프로세스/1-3. 초안.md", "—"],
-  ["CdBd 콘텐츠 등록", "\"CdBd에 올려줘\"", "룩북/1. 제작 프로세스/1-4. CdBd 콘텐츠.md §등록 워크플로우", "후보"],
-  ["화보·상품 배치", "\"화보 배치해줘\"", "룩북/2. 디자인 가이드/2-4. 화보·상품.md", "—"],
-  ["소식지 제작", "\"소식지 만들어줘\"", "소식지/1. 제작 프로세스.md", "—"],
-], [2.05, 2.5, 5.7, 1.38], null, 0.52);
-s.addShape(p.ShapeType.roundRect, { x: M, y: 5.75, w: RIGHT - M, h: 0.8, fill: { color: C.ATINT }, line: { type: "none" }, rectRadius: 0.1 });
+const KIND = { "CdBd 기능": C.ACCENT, "Figma 제작": C.MUTED };
+const rows13 = [
+  ["CdBd 기능", "\"CdBd에 올려줘\" (콘텐츠 등록)", "룩북/1. 제작 프로세스/1-4. CdBd 콘텐츠.md §등록 워크플로우"],
+  ["CdBd 기능", "\"이미지 라이브러리에 올려줘\"", "CLAUDE.md §이미지 라이브러리 (image_library.py)"],
+  ["Figma 제작", "\"룩북 시안 만들어줘\"", "룩북/1. 제작 프로세스/1-2. 시안.md §제작 단계 8"],
+  ["Figma 제작", "\"초안 만들어줘\"", "룩북/1. 제작 프로세스/1-3. 초안.md"],
+  ["Figma 제작", "\"화보 배치해줘\"", "룩북/2. 디자인 가이드/2-4. 화보·상품.md"],
+  ["Figma 제작", "\"소식지 만들어줘\"", "소식지/1. 제작 프로세스.md"],
+];
+const h13 = ["구분", "이렇게 말하면", "정본 파일·섹션 (검증된 경로)"].map(t => ({ text: t, options: { fill: { color: C.INK }, color: "FFFFFF", fontFace: F.semi, fontSize: 12, valign: "middle" } }));
+const b13 = rows13.map((r, i) => {
+  const fill = i % 2 ? C.WHITE : C.PARCH;
+  return [
+    { text: r[0], options: { fill: { color: fill }, color: KIND[r[0]], fontFace: F.semi, fontSize: 11.5 } },
+    { text: r[1], options: { fill: { color: fill }, color: C.INK, fontFace: F.reg, fontSize: 11.5 } },
+    { text: r[2], options: { fill: { color: fill }, color: C.BODY, fontFace: F.reg, fontSize: 11 } },
+  ];
+});
+s.addTable([h13, ...b13], { x: M, y: 2.4, w: RIGHT - M, colW: [1.7, 3.4, 6.53], border: { type: "solid", pt: 0.5, color: C.HAIR }, rowH: 0.48, valign: "middle", margin: [3, 8, 3, 8] });
+s.addShape(p.ShapeType.roundRect, { x: M, y: 5.85, w: RIGHT - M, h: 0.85, fill: { color: C.ATINT }, line: { type: "none" }, rectRadius: 0.1 });
 s.addText([
-  { text: "＋ 도구·규칙  ", options: { fontFace: F.semi, fontSize: 12, color: C.ACCENT } },
-  { text: "로그인 세션(gstack) · Supabase 직접 자동화 · image_library.py 헬퍼는 ‘기능’이 아니라 도구 → 파일 하단 ‘도구·규칙’ 섹션에 별도 기재.", options: { fontFace: F.reg, fontSize: 11.5, color: C.BODY } },
-], { x: M + 0.3, y: 5.85, w: RIGHT - M - 0.6, h: 0.6, valign: "middle", lineSpacingMultiple: 1.3, margin: 0 });
+  { text: "경로 가이드는 이 볼트에서 시킬 수 있는 일 전부를 담되 구분합니다.  ", options: { fontFace: F.semi, fontSize: 11.5, color: C.ACCENT } },
+  { text: "CdBd 기능 · Figma 제작(디자인 작업) · 도구(로그인·Supabase·image_library.py). 분류표(03장)가 센 것은 이 중 ‘CdBd 기능’만.", options: { fontFace: F.reg, fontSize: 11, color: C.BODY } },
+], { x: M + 0.3, y: 5.95, w: RIGHT - M - 0.6, h: 0.65, valign: "middle", lineSpacingMultiple: 1.3, margin: 0 });
 
 /* 14. 플러그인 */
 s = D.content(p, { eyebrow: "확장 · 마지막 단계", chapter: "08  플러그인 제작·배포", title: "플러그인 — 어느 볼트에서나",
