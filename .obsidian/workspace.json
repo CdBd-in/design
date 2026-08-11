@@ -34,19 +34,9 @@
               "icon": "lucide-file",
               "title": "_기능 안내판 실행 계획"
             }
-          },
-          {
-            "id": "dbd64aaea1ff1c45",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "새 탭"
-            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -220,7 +210,7 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "dbd64aaea1ff1c45",
+  "active": "ffdeb66ecb59cefe",
   "lastOpenFiles": [
     "~$_기능 안내판 실행 계획.pptx",
     "_기능 안내판 실행 계획.md",
