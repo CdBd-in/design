@@ -1,14 +1,14 @@
 {
   "main": {
-    "id": "9fc5b3d50e670cb5",
+    "id": "7c3f822ca5d2861b",
     "type": "split",
     "children": [
       {
-        "id": "0bcb115e8209b7cd",
+        "id": "8eab7edcd1ef8e82",
         "type": "tabs",
         "children": [
           {
-            "id": "6493e089818a8dee",
+            "id": "98cd4117fdfe58f2",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -22,45 +22,119 @@
             }
           },
           {
-            "id": "d6c9f532684f4287",
+            "id": "0d2abb90a7a4229f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cdbd-marketing/3. 소개서/1. 스킬/ppt-researcher/SKILL.md",
+                "file": "CdBd 문서 체계 진단 — 발표 대본.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SKILL"
+              "title": "CdBd 문서 체계 진단 — 발표 대본"
             }
           },
           {
-            "id": "df771feb1d68d521",
+            "id": "0b0565b79b9585ce",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "CdBd 문서 체계 진단 — 발표 대본.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "새 탭"
+              "title": "CdBd 문서 체계 진단 — 발표 대본"
+            }
+          },
+          {
+            "id": "6d835d2c2594f844",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CdBd 문서 체계 진단 — 발표 대본.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "CdBd 문서 체계 진단 — 발표 대본"
+            }
+          },
+          {
+            "id": "2f0bdf73bf0801b3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CdBd 문서 체계 진단 — 발표 대본.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "CdBd 문서 체계 진단 — 발표 대본"
+            }
+          },
+          {
+            "id": "401d8b86032f01f6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CdBd 문서 체계 진단 — 발표 대본.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "CdBd 문서 체계 진단 — 발표 대본"
+            }
+          },
+          {
+            "id": "ff701b7659e6de8a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CdBd 문서 체계 진단 — 발표 대본.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "CdBd 문서 체계 진단 — 발표 대본"
+            }
+          },
+          {
+            "id": "83f7d8a7c32c981e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CdBd 문서 체계 진단 및 개편 제안.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "CdBd 문서 체계 진단 및 개편 제안"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "75180430ad04df1e",
+    "id": "7a0ff2bcbabbf8e4",
     "type": "split",
     "children": [
       {
-        "id": "4db25afd73d48bd1",
+        "id": "19179bab97bf9ce0",
         "type": "tabs",
         "children": [
           {
-            "id": "307a53f046401eb1",
+            "id": "85e888418c124b3e",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -75,7 +149,7 @@
             }
           },
           {
-            "id": "e33068b4589e4f9f",
+            "id": "a5e264bb899607f4",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -92,7 +166,7 @@
             }
           },
           {
-            "id": "e08bb4e65e56189c",
+            "id": "bed5f8c788e71b81",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -108,15 +182,15 @@
     "width": 300
   },
   "right": {
-    "id": "a8269292894d6232",
+    "id": "e6dc84a937f38be0",
     "type": "split",
     "children": [
       {
-        "id": "56d8da195166c078",
+        "id": "237159cc6c2529ce",
         "type": "tabs",
         "children": [
           {
-            "id": "ebc1690db4b1e954",
+            "id": "d74694d49d54743d",
             "type": "leaf",
             "state": {
               "type": "backlink",
@@ -134,7 +208,7 @@
             }
           },
           {
-            "id": "ccb511ede342e767",
+            "id": "0cdfb7431d47318f",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
@@ -147,7 +221,7 @@
             }
           },
           {
-            "id": "b0d8f30cb4920c53",
+            "id": "717253b10bfe2df3",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -162,7 +236,7 @@
             }
           },
           {
-            "id": "e0331166a1c1448e",
+            "id": "17a8da03f65d5337",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -176,7 +250,7 @@
             }
           },
           {
-            "id": "407b7518ad56ec53",
+            "id": "751adde609a58df4",
             "type": "leaf",
             "state": {
               "type": "outline",
@@ -190,7 +264,7 @@
             }
           },
           {
-            "id": "ffdeb66ecb59cefe",
+            "id": "41e770cf527e042a",
             "type": "leaf",
             "state": {
               "type": "claudian-view",
@@ -204,59 +278,69 @@
       }
     ],
     "direction": "horizontal",
-    "width": 612.59765625
+    "width": 499.703125
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian42-brat:BRAT": false,
+      "obsidian-git:Open Git source control": false,
+      "realclaudian:Open Claudian": false,
       "switcher:빠른 전환기 열기": false,
       "graph:그래프 뷰 열기": false,
       "canvas:새 캔버스 만들기": false,
       "daily-notes:오늘의 일일 노트 열기": false,
       "templates:템플릿 삽입": false,
       "command-palette:명령어 팔레트 열기": false,
-      "bases:새 베이스 생성하기": false,
-      "obsidian42-brat:BRAT": false,
-      "obsidian-git:Open Git source control": false,
-      "realclaudian:Open Claudian": false
+      "bases:새 베이스 생성하기": false
     }
   },
-  "active": "df771feb1d68d521",
+  "active": "83f7d8a7c32c981e",
   "lastOpenFiles": [
-    "~$_기능별 문서 위치 — 실행 계획.pptx",
-    "_문서 경로 가이드 — 실행 계획.md",
-    "_기능별 문서 위치 — 실행 계획.md",
     "_기능별 문서 위치 — 실행 계획.pptx",
-    "~$_문서 경로 가이드 — 실행 계획.pptx",
-    "_기능 안내판 실행 계획.md",
+    "_기능별 문서 위치 — 실행 계획.md",
     "_문서 경로 가이드 — 실행 계획.pptx",
-    "~$_기능 안내판 실행 계획.pptx",
+    "_문서 경로 가이드 — 실행 계획.md",
     "_build_plan_ppt.js",
-    "_build_plan_ppt.js.tmp.82789.444b47e316d9",
-    "cdbd-marketing/3. 소개서/1. 스킬/ppt-researcher/SKILL.md",
-    "cdbd-marketing/3. 소개서/1. 스킬/ppt-researcher/brief-template.md",
-    "cdbd-marketing/3. 소개서/1. 스킬/cdbd-ppt-generator/SKILL.md",
-    "cdbd-marketing/3. 소개서/1. 스킬/cdbd-ppt-generator/design-system.md",
-    "CdBd 문서 체계 진단 및 개편 제안.md",
+    "~$_기능 안내판 실행 계획.pptx",
     "_기능 안내판 실행 계획.pptx",
+    "_기능 안내판 실행 계획.md",
     "_build_plan_ppt.py",
-    "cdbd-templates/컨텍스트: 이선호/2026-08-07 AI 유저 플로우 Figma 시안 대량 반복 — 그레이스케일 플로우·대화형·묶음·인디케이터 .md",
-    "cdbd-marketing/3. 소개서/1. 스킬/ppt-researcher/ppt-researcher.skill",
-    "cdbd-marketing/3. 소개서/1. 스킬/cdbd-ppt-generator/cdbd_deck.js",
-    "cdbd-marketing/3. 소개서/1. 스킬/README.md",
-    "makevu-qrstp/큐알스탬프 소개서/2607_소개서 리뉴얼 구조안.md",
     "CdBd 문서 체계 진단 — 발표 대본.md",
-    "ONBOARDING.md",
-    "cdbd-marketing/컨텍스트: 강현이/블로그 이미지 만들기-시작방법.md",
-    "MIGRATION.md",
-    "makevu-qrstp/컨텍스트: 강현이/2026-07-10.md",
-    "makevu-qrstp/컨텍스트: 강현이/2026-06-25.md",
-    "makevu-qrstp/컨텍스트: 강현이/2026-06-30.md",
-    "makevu-qrstp/컨텍스트: 강현이/2026-07-07-1.md",
-    "makevu-qrstp/컨텍스트: 강현이/2026-07-09.md",
-    "makevu-qrstp/컨텍스트: 강현이/2026-07-08.md",
-    "makevu-qrstp/컨텍스트: 강현이/2026-07-07.md",
-    "cdbd-marketing/컨텍스트: 강현이/2026-05-21.md",
+    "CdBd 문서 체계 진단 및 개편 제안.md",
+    "cdbd-templates/컨텍스트: 이선호/2026-08-07 AI 유저 플로우 Figma 시안 대량 반복 — 그레이스케일 플로우·대화형·묶음·인디케이터 .md",
+    "cdbd-marketing/컨텍스트: 이선호/2026-07-01.md",
+    "cdbd-marketing/컨텍스트: 이선호/2026-06-30.md",
+    "cdbd-marketing/컨텍스트: 이선호/2026-06-24.md",
+    "cdbd-marketing/컨텍스트: 이선호/2026-06-23.md",
+    "cdbd-marketing/컨텍스트: 이선호/2026-06-22.md",
+    "cdbd-marketing/컨텍스트: 이선호/2026-05-21.md",
+    "cdbd-marketing/컨텍스트: 이선호",
+    "cdbd-marketing/컨텍스트: 강현이/2026-07-16.md",
+    "cdbd-marketing/컨텍스트: 강현이/2026-06-19.md",
+    "cdbd-marketing/컨텍스트: 강현이/2026-06-18.md",
+    "cdbd-marketing/컨텍스트: 강현이/2026-06-13.md",
+    "cdbd-marketing/컨텍스트: 강현이/2026-06-13-3.md",
+    "cdbd-marketing/컨텍스트: 강현이/2026-06-13-2.md",
+    "cdbd-marketing/컨텍스트: 강현이/2026-06-11.md",
+    "cdbd-marketing/컨텍스트: 강현이/2026-06-01.md",
+    "cdbd-marketing/컨텍스트: 강현이/2026-06-01-2.md",
     "cdbd-marketing/컨텍스트: 강현이/2026-05-31.md",
-    "cdbd-marketing/컨텍스트: 강현이/2026-05-29-2.md"
+    "cdbd-marketing/컨텍스트: 강현이/2026-05-31-2.md",
+    "cdbd-marketing/컨텍스트: 강현이/2026-05-29.md",
+    "cdbd-marketing/컨텍스트: 강현이/2026-05-29-2.md",
+    "cdbd-marketing/자동화 도구/cdbd-capture/templates-list.json",
+    "cdbd-marketing/자동화 도구/cdbd-capture/screenshots/brochure-covers/product-detail.png",
+    "cdbd-marketing/자동화 도구/cdbd-capture/screenshots/brochure-covers/online_lookbook.png",
+    "cdbd-marketing/자동화 도구/cdbd-capture/screenshots/brochure-covers/oak_table.png",
+    "cdbd-marketing/자동화 도구/cdbd-capture/screenshots/brochure-covers/newarrival.png",
+    "cdbd-marketing/자동화 도구/cdbd-capture/screenshots/brochure-covers/lookbook.png",
+    "cdbd-marketing/자동화 도구/cdbd-capture/screenshots/brochure-covers/lookbook-online.png",
+    "cdbd-marketing/자동화 도구/cdbd-capture/screenshots/brochure-covers/lookbook-offline.png",
+    "cdbd-marketing/자동화 도구/cdbd-capture/screenshots/brochure-covers",
+    "cdbd-marketing/자동화 도구/cdbd-capture/probe-product-detail.mjs",
+    "cdbd-marketing/자동화 도구/cdbd-capture/discover-v2.mjs",
+    "cdbd-marketing/_tmp_assets/post3-팜플렛-썸네일-4안.png",
+    "cdbd-marketing/_tmp_assets/post3-팜플렛-본문이미지-3장.png",
+    "cdbd-marketing/_tmp_assets/post2-카탈로그-썸네일-4안.png"
   ]
 }
