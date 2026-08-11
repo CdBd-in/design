@@ -34,9 +34,19 @@
               "icon": "lucide-file",
               "title": "SKILL"
             }
+          },
+          {
+            "id": "df771feb1d68d521",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "새 탭"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -210,14 +220,15 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "ffdeb66ecb59cefe",
+  "active": "df771feb1d68d521",
   "lastOpenFiles": [
+    "~$_기능별 문서 위치 — 실행 계획.pptx",
+    "_문서 경로 가이드 — 실행 계획.md",
+    "_기능별 문서 위치 — 실행 계획.md",
     "_기능별 문서 위치 — 실행 계획.pptx",
     "~$_문서 경로 가이드 — 실행 계획.pptx",
     "_기능 안내판 실행 계획.md",
-    "_문서 경로 가이드 — 실행 계획.md",
     "_문서 경로 가이드 — 실행 계획.pptx",
-    "_기능별 문서 위치 — 실행 계획.md",
     "~$_기능 안내판 실행 계획.pptx",
     "_build_plan_ppt.js",
     "_build_plan_ppt.js.tmp.82789.444b47e316d9",
@@ -231,7 +242,6 @@
     "cdbd-templates/컨텍스트: 이선호/2026-08-07 AI 유저 플로우 Figma 시안 대량 반복 — 그레이스케일 플로우·대화형·묶음·인디케이터 .md",
     "cdbd-marketing/3. 소개서/1. 스킬/ppt-researcher/ppt-researcher.skill",
     "cdbd-marketing/3. 소개서/1. 스킬/cdbd-ppt-generator/cdbd_deck.js",
-    "cdbd-marketing/3. 소개서/1. 스킬/cdbd-ppt-generator/cdbd-ppt-generator.skill",
     "cdbd-marketing/3. 소개서/1. 스킬/README.md",
     "makevu-qrstp/큐알스탬프 소개서/2607_소개서 리뉴얼 구조안.md",
     "CdBd 문서 체계 진단 — 발표 대본.md",
