@@ -175,7 +175,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 585.54296875
+    "width": 586.6015625
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -191,7 +191,7 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "ce9ce9cacd0db1f0",
+  "active": "ffdeb66ecb59cefe",
   "lastOpenFiles": [
     "_기능별 경로 가이드 — 실행 계획.md",
     "cdbd-design-service/룩북/2. 디자인 가이드/2-2. 표지.md",
