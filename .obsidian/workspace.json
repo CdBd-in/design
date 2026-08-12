@@ -11,10 +11,14 @@
             "id": "ce9ce9cacd0db1f0",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "CdBd 기능 문서 구조 설계 — 발표 대본.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "새 탭"
+              "title": "CdBd 기능 문서 구조 설계 — 발표 대본"
             }
           }
         ]
@@ -175,7 +179,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 586.6015625
+    "width": 594.29296875
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -191,7 +195,7 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "ffdeb66ecb59cefe",
+  "active": "ce9ce9cacd0db1f0",
   "lastOpenFiles": [
     "CdBd 기능 문서 구조 설계 — 발표 대본.md",
     "~$CdBd 기능 문서 구조 설계.pptx",
