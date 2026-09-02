@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_기능별 경로 가이드 — 실행 계획.md",
+                "file": "CdBd 기능 목록 상세.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "_기능별 경로 가이드 — 실행 계획"
+              "title": "CdBd 기능 목록 상세"
             }
           },
           {
@@ -223,8 +223,8 @@
   },
   "active": "ce9ce9cacd0db1f0",
   "lastOpenFiles": [
-    "CdBd 문서 체계 진단 및 개편 제안.md",
     "_기능별 경로 가이드 — 실행 계획.md",
+    "CdBd 문서 체계 진단 및 개편 제안.md",
     "CdBd 문서 체계 진단 — 발표 대본.md",
     "CdBd 기능 문서 구조 설계 — 발표 대본.md",
     "CdBd 기능 목록 상세.md",
