@@ -237,17 +237,19 @@
   },
   "active": "ffdeb66ecb59cefe",
   "lastOpenFiles": [
+    "cdbd-marketing/_tmp_assets/usecase03/f_seminar430-p-venue.png",
+    "cdbd-marketing/_tmp_assets/usecase03/f_seminar430-p-rsvp.png",
+    "cdbd-marketing/_tmp_assets/usecase03/f_seminar430-p-program.png",
+    "cdbd-marketing/자동화 도구/cdbd-capture/screenshots/usecase03/seminar430-p-venue.png",
+    "cdbd-marketing/자동화 도구/cdbd-capture/screenshots/usecase03/seminar430-p-rsvp.png",
+    "cdbd-marketing/자동화 도구/cdbd-capture/screenshots/usecase03/seminar430-p-program.png",
+    "cdbd-marketing/자동화 도구/cdbd-capture/capture-usecase03-fixed.mjs",
     "cdbd-marketing/1. 블로그/1-1. 썸네일/1-1-5. 제작 내역/2026-09-02 VIP 초청장 예약·좌석·리마인더.md",
     "cdbd-marketing/_tmp_assets/시안-2026-09-02-VIP초청장/b05.png",
     "cdbd-marketing/_tmp_assets/시안-2026-09-02-VIP초청장/b04.png",
     "cdbd-marketing/_tmp_assets/시안-2026-09-02-VIP초청장/b03.png",
     "cdbd-marketing/_tmp_assets/시안-2026-09-02-VIP초청장/b02.png",
     "cdbd-marketing/_tmp_assets/시안-2026-09-02-VIP초청장/b01.png",
-    "cdbd-marketing/_tmp_assets/시안-2026-09-02-VIP초청장/t5.png",
-    "cdbd-marketing/_tmp_assets/시안-2026-09-02-VIP초청장/t45.png",
-    "cdbd-marketing/_tmp_assets/시안-2026-09-02-VIP초청장/t4.png",
-    "cdbd-marketing/_tmp_assets/시안-2026-09-02-VIP초청장/t3.png",
-    "cdbd-marketing/_tmp_assets/시안-2026-09-02-VIP초청장/t2.png",
     "cdbd-marketing/_tmp_assets/시안-2026-09-02-VIP초청장",
     "cdbd-marketing/1. 블로그/1-1. 썸네일/_시안 미리보기/2026-09-02 이용사례03-기업행사초대장",
     "cdbd-marketing/_tmp_assets/usecase03/gen",
@@ -257,7 +259,6 @@
     "cdbd-marketing/자동화 도구/cdbd-capture/capture-usecase03.mjs",
     "cdbd-marketing/_tmp_assets/usecase03",
     "_경로가이드-검증.py",
-    "cdbd-marketing/자동화 도구/cdbd-capture/capture-vip01-gala2.mjs",
     "CdBd 기능 목록 상세.md",
     "_기능별 경로 가이드 — 분류표.md",
     "cdbd-templates/_기능별 경로 가이드.md",
@@ -281,7 +282,6 @@
     "cdbd-marketing/3. 소개서/1. 스킬/cdbd-ppt-generator/SKILL.md",
     "cdbd-marketing/3. 소개서/1. 스킬/cdbd-ppt-generator/design-system.md",
     "cdbd-templates/컨텍스트: 이선호/2026-08-07 AI 유저 플로우 Figma 시안 대량 반복 — 그레이스케일 플로우·대화형·묶음·인디케이터 .md",
-    "cdbd-marketing/3. 소개서/1. 스킬/README.md",
-    "makevu-qrstp/큐알스탬프 소개서/2607_소개서 리뉴얼 구조안.md"
+    "cdbd-marketing/3. 소개서/1. 스킬/README.md"
   ]
 }
