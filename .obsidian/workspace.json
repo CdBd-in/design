@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CdBd 기능 문서 구조 설계 — 발표 대본.md",
+                "file": "_기능별 경로 가이드 — 실행 계획.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CdBd 기능 문서 구조 설계 — 발표 대본"
+              "title": "_기능별 경로 가이드 — 실행 계획"
             }
           },
           {
@@ -189,7 +189,8 @@
                   "openTabs": [
                     {
                       "tabId": "tab-1786439734116-1dzhezk",
-                      "conversationId": "conv-1786440055199-0oygib12l"
+                      "conversationId": null,
+                      "draftModel": "opus"
                     }
                   ],
                   "activeTabId": "tab-1786439734116-1dzhezk"
@@ -222,8 +223,11 @@
   },
   "active": "ce9ce9cacd0db1f0",
   "lastOpenFiles": [
-    "CdBd 기능 목록 상세.md",
+    "CdBd 문서 체계 진단 및 개편 제안.md",
+    "_기능별 경로 가이드 — 실행 계획.md",
+    "CdBd 문서 체계 진단 — 발표 대본.md",
     "CdBd 기능 문서 구조 설계 — 발표 대본.md",
+    "CdBd 기능 목록 상세.md",
     "cdbd-templates/컨텍스트: 이선호/2026-08-13 서초 프로그램북 — 인쇄물 PDF를 모바일 CdBd 이미지로 (27→18쪽).md",
     "cdbd-templates/컨텍스트: 이선호/2026-08-12 히어로 프리셋 20안 오케스트레이터 빌드.md",
     "cdbd-design-service/컨텍스트: 이선호/2026-08-12 코사 시안 cdbd-legal 수정 + 콘텐츠 검수.md",
@@ -231,11 +235,9 @@
     "~$웹 페이지 유형 정리.pptx",
     "웹 페이지 유형 정리.pptx",
     "~$CdBd 기능 문서 구조 설계.pptx",
-    "_기능별 경로 가이드 — 실행 계획.md",
     "cdbd-design-service/룩북/2. 디자인 가이드/2-2. 표지.md",
     "cdbd-design-service/CLAUDE.md",
     "cdbd-marketing/3. 소개서/1. 스킬/ppt-researcher/SKILL.md",
-    "CdBd 문서 체계 진단 및 개편 제안.md",
     "cdbd-design-system/docs/CdBd 에디터 문서 구축 계획.html",
     "CdBd 기능 문서 구조 설계.pptx",
     "cdbd-design-service/룩북/2. 디자인 가이드/2-1. 공통.md",
@@ -254,7 +256,6 @@
     "cdbd-templates/컨텍스트: 이선호/2026-08-07 AI 유저 플로우 Figma 시안 대량 반복 — 그레이스케일 플로우·대화형·묶음·인디케이터 .md",
     "cdbd-marketing/3. 소개서/1. 스킬/README.md",
     "makevu-qrstp/큐알스탬프 소개서/2607_소개서 리뉴얼 구조안.md",
-    "CdBd 문서 체계 진단 — 발표 대본.md",
     "ONBOARDING.md",
     "cdbd-marketing/컨텍스트: 강현이/블로그 이미지 만들기-시작방법.md",
     "MIGRATION.md"
