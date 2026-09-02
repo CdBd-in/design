@@ -25,10 +25,14 @@
             "id": "4055a0bf838fe06b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "CdBd 기능 목록 상세.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "새 탭"
+              "title": "CdBd 기능 목록 상세"
             }
           }
         ],
@@ -208,12 +212,13 @@
   },
   "active": "4055a0bf838fe06b",
   "lastOpenFiles": [
+    "CdBd 기능 문서 구조 설계 — 발표 대본.md",
+    "CdBd 기능 목록 상세.md",
     "cdbd-templates/컨텍스트: 이선호/2026-08-13 서초 프로그램북 — 인쇄물 PDF를 모바일 CdBd 이미지로 (27→18쪽).md",
     "cdbd-templates/컨텍스트: 이선호/2026-08-12 히어로 프리셋 20안 오케스트레이터 빌드.md",
     "cdbd-design-service/컨텍스트: 이선호/2026-08-12 코사 시안 cdbd-legal 수정 + 콘텐츠 검수.md",
     "cdbd-design-service/컨텍스트: 이선호/2026-08-12 코사 모바일 디렉토리북 싱가포르 시안.md",
     "~$웹 페이지 유형 정리.pptx",
-    "CdBd 기능 문서 구조 설계 — 발표 대본.md",
     "웹 페이지 유형 정리.pptx",
     "~$CdBd 기능 문서 구조 설계.pptx",
     "_기능별 경로 가이드 — 실행 계획.md",
@@ -224,7 +229,6 @@
     "cdbd-design-system/docs/CdBd 에디터 문서 구축 계획.html",
     "CdBd 기능 문서 구조 설계.pptx",
     "cdbd-design-service/룩북/2. 디자인 가이드/2-1. 공통.md",
-    "CdBd 기능 목록 상세.md",
     "~$_기능별 경로 가이드 — 실행 계획.pptx",
     "_CdBd 기능 커버리지 (경로 가이드 상세).md",
     "_기능별 경로 가이드 — 실행 계획.pptx",
