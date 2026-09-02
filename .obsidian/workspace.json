@@ -35,8 +35,7 @@
               "title": "CdBd 기능 목록 상세"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -184,7 +183,18 @@
             "type": "leaf",
             "state": {
               "type": "claudian-view",
-              "state": {},
+              "state": {
+                "tabWorkspace": {
+                  "version": 1,
+                  "openTabs": [
+                    {
+                      "tabId": "tab-1786439734116-1dzhezk",
+                      "conversationId": "conv-1786440055199-0oygib12l"
+                    }
+                  ],
+                  "activeTabId": "tab-1786439734116-1dzhezk"
+                }
+              },
               "icon": "bot",
               "title": "Claudian"
             }
@@ -210,10 +220,10 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "4055a0bf838fe06b",
+  "active": "ce9ce9cacd0db1f0",
   "lastOpenFiles": [
-    "CdBd 기능 문서 구조 설계 — 발표 대본.md",
     "CdBd 기능 목록 상세.md",
+    "CdBd 기능 문서 구조 설계 — 발표 대본.md",
     "cdbd-templates/컨텍스트: 이선호/2026-08-13 서초 프로그램북 — 인쇄물 PDF를 모바일 CdBd 이미지로 (27→18쪽).md",
     "cdbd-templates/컨텍스트: 이선호/2026-08-12 히어로 프리셋 20안 오케스트레이터 빌드.md",
     "cdbd-design-service/컨텍스트: 이선호/2026-08-12 코사 시안 cdbd-legal 수정 + 콘텐츠 검수.md",
