@@ -83,12 +83,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CdBd 기능 사전 (공통).md",
+                "file": "컨텍스트-강현이/2026-09-03 기능별 경로 가이드 — 구축·검증·가이드센터 수집·영상 A1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CdBd 기능 사전 (공통)"
+              "title": "2026-09-03 기능별 경로 가이드 — 구축·검증·가이드센터 수집·영상 A1"
             }
           },
           {
@@ -291,14 +291,14 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "ffdeb66ecb59cefe",
+  "active": "948e8663d9fc1248",
   "lastOpenFiles": [
+    "CdBd 기능 사전 (공통).md",
     "컨텍스트-강현이/2026-09-03 기능별 경로 가이드 — 구축·검증·가이드센터 수집·영상 A1.md",
     "컨텍스트-강현이",
     "cdbd-design-service/_기능별 경로 가이드.md",
     "CdBd 기능 목록 상세.md",
     "CdBd 기능 문서 구조 설계 — 발표 대본.md",
-    "CdBd 기능 사전 (공통).md",
     "_기능별 경로 가이드 — 실행 계획.md",
     "CdBd 기능 영상 녹화 가이드.pdf",
     "cdbd-marketing/1. 블로그/1-2. 본문/_시안 미리보기/2026-09-02 이용사례02-리테일CRM카탈로그/회차별카드-개별URL.png",
