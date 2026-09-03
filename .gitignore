@@ -10,3 +10,4 @@ makevu-qrstp/
 
 # Claudian local settings (per-machine, should not sync)
 .claudian/
+.gstack/
