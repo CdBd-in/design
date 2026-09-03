@@ -231,7 +231,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 781.30078125
+    "width": 975.51953125
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -247,7 +247,7 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "ffdeb66ecb59cefe",
+  "active": "8806f97715e12940",
   "lastOpenFiles": [
     "cdbd-templates/1. 작업 가이드/1-10. 초대장 사례 사전 (초안).md",
     "cdbd-templates/1. 작업 가이드/1-9-A. 방향 매칭표 (제안 초안).md",
