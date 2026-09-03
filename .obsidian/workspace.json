@@ -235,8 +235,10 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "ffdeb66ecb59cefe",
+  "active": "70f61be4590ad508",
   "lastOpenFiles": [
+    "CdBd 기능 목록 상세.md",
+    "cdbd-templates/_기능별 경로 가이드.md",
     "cdbd-marketing/1. 블로그/1-2. 본문/_시안 미리보기/2026-09-02 이용사례03-기업행사초대장/body06-나열-그룹별RSVP폼3벌.png",
     "cdbd-marketing/1. 블로그/1-2. 본문/_시안 미리보기/2026-09-02 이용사례03-기업행사초대장/_수신자줄-AC비교.png",
     "cdbd-marketing/1. 블로그/1-2. 본문/_시안 미리보기/2026-09-02 이용사례03-기업행사초대장/body01-hero-그룹별수신자-C안.png",
@@ -247,7 +249,6 @@
     "cdbd-marketing/자동화 도구/cdbd-capture/screenshots/usecase03/groups/seminar-C-press.png",
     "cdbd-marketing/자동화 도구/cdbd-capture/screenshots/usecase03/groups/seminar-C-partner.png",
     "cdbd-marketing/자동화 도구/cdbd-capture/screenshots/usecase03/groups/seminar-A-vip.png",
-    "cdbd-marketing/자동화 도구/cdbd-capture/screenshots/usecase03/groups/seminar-A-press.png",
     "cdbd-marketing/자동화 도구/cdbd-capture/screenshots/usecase03/groups",
     "cdbd-marketing/1. 블로그/1-1. 썸네일/_시안 미리보기/2026-09-02 채택본 4종(기준)",
     "cdbd-marketing/_tmp_assets/usecase02/recolor",
@@ -263,9 +264,7 @@
     "cdbd-marketing/1. 블로그/1-2. 본문/_시안 미리보기/2026-09-02 이용사례04-팝업스토어초대장",
     "cdbd-marketing/1. 블로그/1-1. 썸네일/1-1-5. 제작 내역/2026-09-02 이용사례03 기업 행사 초대장 그룹별 URL.md",
     "cdbd-marketing/1. 블로그/1-1. 썸네일/1-1-5. 제작 내역/2026-09-02 VIP 초청장 예약·좌석·리마인더.md",
-    "CdBd 기능 목록 상세.md",
     "_기능별 경로 가이드 — 분류표.md",
-    "cdbd-templates/_기능별 경로 가이드.md",
     "_기능별 경로 가이드 — 실행 계획.md",
     "CdBd 문서 체계 진단 및 개편 제안.md",
     "CdBd 문서 체계 진단 — 발표 대본.md",
