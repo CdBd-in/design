@@ -83,12 +83,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "컨텍스트-강현이/2026-09-03 기능별 경로 가이드 — 구축·검증·가이드센터 수집·영상 A1.md",
+                "file": "cdbd-design-service/_기능별 경로 가이드.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-09-03 기능별 경로 가이드 — 구축·검증·가이드센터 수집·영상 A1"
+              "title": "_기능별 경로 가이드"
             }
           },
           {
@@ -293,8 +293,8 @@
   },
   "active": "948e8663d9fc1248",
   "lastOpenFiles": [
-    "CdBd 기능 사전 (공통).md",
     "컨텍스트-강현이/2026-09-03 기능별 경로 가이드 — 구축·검증·가이드센터 수집·영상 A1.md",
+    "CdBd 기능 사전 (공통).md",
     "컨텍스트-강현이",
     "cdbd-design-service/_기능별 경로 가이드.md",
     "CdBd 기능 목록 상세.md",
