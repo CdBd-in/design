@@ -39,12 +39,56 @@
             "id": "8806f97715e12940",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "CdBd 기능 영상 녹화 가이드.pdf"
+                "file": "CdBd 기능 사전 (공통).md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "CdBd 기능 영상 녹화 가이드"
+              "icon": "lucide-file",
+              "title": "CdBd 기능 사전 (공통)"
+            }
+          },
+          {
+            "id": "275b2f3130defa8b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_기능별 경로 가이드 — 실행 계획.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "_기능별 경로 가이드 — 실행 계획"
+            }
+          },
+          {
+            "id": "1054e9b5396da9ae",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CdBd 기능 사전 (공통).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "CdBd 기능 사전 (공통)"
+            }
+          },
+          {
+            "id": "948e8663d9fc1248",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_기능별 경로 가이드 — 실행 계획.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "_기능별 경로 가이드 — 실행 계획"
             }
           },
           {
@@ -62,7 +106,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -247,8 +291,11 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "ffdeb66ecb59cefe",
+  "active": "948e8663d9fc1248",
   "lastOpenFiles": [
+    "CdBd 기능 사전 (공통).md",
+    "_기능별 경로 가이드 — 실행 계획.md",
+    "CdBd 기능 영상 녹화 가이드.pdf",
     "cdbd-marketing/1. 블로그/1-2. 본문/_시안 미리보기/2026-09-02 이용사례02-리테일CRM카탈로그/회차별카드-개별URL.png",
     "cdbd-marketing/_tmp_assets/usecase02/weeks_preview.png",
     "cdbd-marketing/자동화 도구/cdbd-capture/screenshots/usecase02/weeks/newarrival-w3.png",
@@ -261,15 +308,12 @@
     "cdbd-templates/1. 작업 가이드/1-10. 초대장 사례 사전 (초안).md",
     "cdbd-templates/1. 작업 가이드/1-9-A. 방향 매칭표 (제안 초안).md",
     "CdBd 기능 영상 녹화 가이드.md",
-    "CdBd 기능 영상 녹화 가이드.pdf",
     "cdbd-templates/_기능별 경로 가이드.md",
-    "CdBd 기능 사전 (공통).md",
     "CdBd 기능 목록 상세.md",
     "cdbd-marketing/1. 블로그/1-2. 본문/_시안 미리보기/2026-09-02 이용사례03-기업행사초대장/body06-나열-그룹별RSVP폼3벌.png",
     "cdbd-marketing/1. 블로그/1-2. 본문/_시안 미리보기/2026-09-02 이용사례03-기업행사초대장/_수신자줄-AC비교.png",
     "cdbd-marketing/1. 블로그/1-2. 본문/_시안 미리보기/2026-09-02 이용사례03-기업행사초대장/body01-hero-그룹별수신자-C안.png",
     "cdbd-marketing/1. 블로그/1-2. 본문/_시안 미리보기/2026-09-02 이용사례03-기업행사초대장/body01-hero-그룹별수신자-A안.png",
-    "cdbd-marketing/_tmp_assets/usecase03/grp_C.png",
     "cdbd-marketing/자동화 도구/cdbd-capture/screenshots/usecase03/groups",
     "cdbd-marketing/1. 블로그/1-1. 썸네일/_시안 미리보기/2026-09-02 채택본 4종(기준)",
     "cdbd-marketing/_tmp_assets/usecase02/recolor",
@@ -284,7 +328,6 @@
     "cdbd-marketing/1. 블로그/1-1. 썸네일/1-1-5. 제작 내역/2026-09-02 이용사례03 기업 행사 초대장 그룹별 URL.md",
     "cdbd-marketing/1. 블로그/1-1. 썸네일/1-1-5. 제작 내역/2026-09-02 VIP 초청장 예약·좌석·리마인더.md",
     "_기능별 경로 가이드 — 분류표.md",
-    "_기능별 경로 가이드 — 실행 계획.md",
     "CdBd 문서 체계 진단 및 개편 제안.md",
     "CdBd 문서 체계 진단 — 발표 대본.md",
     "CdBd 기능 문서 구조 설계 — 발표 대본.md",
