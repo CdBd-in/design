@@ -142,6 +142,6 @@ STEP 1~4 진행 중 확인·결정된 사항. 이 문서가 **볼트별 기능 �
 | 볼트 | `_기능별 경로 가이드.md` | 검증 |
 |---|---|---|
 | [T] cdbd-templates | ✅ 작성 (2026-09-02 · 143줄) | ✅ 4/4 통과 |
-| [SV] cdbd-design-service | ⏳ 다음 차례 | — |
+| [SV] cdbd-design-service | ✅ 작성 (2026-09-03 · 123줄) — 홈페이지(계정) 담당 + 크레딧 충전 실측 포함 | ⏳ 검증 대기 |
 | cdbd-marketing · makevu-qrstp | ⏳ 범위 재정의 필요(CdBd 기능 거의 없음) | — |
 | [DS] cdbd-design-system | 제외 | — |
