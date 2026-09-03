@@ -291,8 +291,9 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "ffdeb66ecb59cefe",
+  "active": "307a53f046401eb1",
   "lastOpenFiles": [
+    "컨텍스트-강현이",
     "cdbd-design-service/_기능별 경로 가이드.md",
     "CdBd 기능 목록 상세.md",
     "CdBd 기능 문서 구조 설계 — 발표 대본.md",
@@ -337,7 +338,6 @@
     "cdbd-design-service/컨텍스트: 이선호/2026-08-12 코사 시안 cdbd-legal 수정 + 콘텐츠 검수.md",
     "cdbd-design-service/컨텍스트: 이선호/2026-08-12 코사 모바일 디렉토리북 싱가포르 시안.md",
     "cdbd-design-service/룩북/2. 디자인 가이드/2-2. 표지.md",
-    "cdbd-design-service/CLAUDE.md",
-    "cdbd-marketing/3. 소개서/1. 스킬/ppt-researcher/SKILL.md"
+    "cdbd-design-service/CLAUDE.md"
   ]
 }
