@@ -10,3 +10,7 @@ makevu-qrstp/
 
 # Claudian local settings (per-machine, should not sync)
 .claudian/
+
+# Obsidian UI 레이아웃 상태 (기기마다 달라 충돌만 유발)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
