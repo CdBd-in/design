@@ -41,7 +41,7 @@ const toc = [
   ["04", "문서 채우기 — 영상이 필요한 기능", "무엇을 어떻게 채우나"],
   ["05", "기능별 경로 가이드 — 설계와 원리", "무슨 파일에 어떻게"],
   ["06", "실행 순서", "한 곳을 끝까지 → 확산"],
-  ["07", "예시 — cdbd-design-service", "과정 · 결과 · 파일 실물"],
+  ["07", "예시 — cdbd-templates", "과정 · 결과 · 파일 실물"],
   ["08", "플러그인 — 어느 볼트에서나", "마지막 단계"],
   ["09", "다음 액션", "누가 · 무엇을 · 지금"],
 ];
@@ -119,11 +119,13 @@ s.addShape(p.ShapeType.roundRect, { x: M, y: 2.45, w: RIGHT - M, h: 2.6, fill: {
 s.addText("영상(녹화) 권장 — ○ 없음 대부분", { x: M + 0.35, y: 2.62, w: RIGHT - M - 0.7, h: 0.35, fontFace: F.semi, fontSize: 14, color: C.ACCENT, margin: 0 });
 s.addText("· 페이지 통계 · URL 통계 (방문·클릭·응답·예약·구독)\n· 데이터 연결(개인화) — 고객 데이터 병합\n· 버전 기록 · 공유 복제\n· 내 페이지 관리 · 어드민 운영 설정\n· 계정 · 내 주소 · 요금(결제) · 권한",
   { x: M + 0.35, y: 3.08, w: RIGHT - M - 0.7, h: 1.85, valign: "top", fontFace: F.reg, fontSize: 13, color: C.BODY, lineSpacingMultiple: 1.5, margin: 0 });
-s.addShape(p.ShapeType.roundRect, { x: M, y: 5.3, w: RIGHT - M, h: 1.15, fill: { color: C.TILE }, line: { type: "none" }, rectRadius: 0.1 });
+s.addShape(p.ShapeType.roundRect, { x: M, y: 5.2, w: RIGHT - M, h: 1.3, fill: { color: C.TILE }, line: { type: "none" }, rectRadius: 0.1 });
 s.addText([
-  { text: "형식 안내  ", options: { fontFace: F.semi, fontSize: 12.5, color: C.ON_DARK_ACCENT } },
-  { text: "영상 파일을 주시면 제가 프레임(정지화면)으로 뽑아 읽습니다. 화면은 보지만 음성(내레이션)은 못 들으니, 핵심 동작이 화면에 보이게(또는 자막) 녹화해 주세요.", options: { fontFace: F.reg, fontSize: 12, color: "FFFFFF" } },
-], { x: M + 0.3, y: 5.42, w: RIGHT - M - 0.6, h: 0.92, valign: "middle", lineSpacingMultiple: 1.35, margin: 0 });
+  { text: "채우는 원칙  ", options: { fontFace: F.semi, fontSize: 12, color: C.ON_DARK_ACCENT } },
+  { text: "팀이 실제 쓰는 기능만 문서화 — 안 쓰는 기능(예: 데이터 연결=고객별 개인화)은 ○인 채로 둔다.\n", options: { fontFace: F.reg, fontSize: 11.5, color: "FFFFFF" } },
+  { text: "영상 형식  ", options: { fontFace: F.semi, fontSize: 12, color: C.ON_DARK_ACCENT } },
+  { text: "영상을 주시면 프레임으로 뽑아 읽습니다(화면만, 음성 제외). 핵심 화면을 캡처해 주세요.", options: { fontFace: F.reg, fontSize: 11.5, color: "FFFFFF" } },
+], { x: M + 0.3, y: 5.3, w: RIGHT - M - 0.6, h: 1.08, valign: "middle", lineSpacingMultiple: 1.3, margin: 0 });
 
 /* 9. 기능별 경로 가이드 — 설계와 원리 */
 s = D.content(p, { eyebrow: "설계", chapter: "05  기능별 경로 가이드 — 설계와 원리", title: "저장소마다 살아있는 index",
@@ -132,13 +134,13 @@ s.addShape(p.ShapeType.roundRect, { x: M, y: 2.4, w: RIGHT - M, h: 1.4, fill: { 
 s.addText([
   { text: "각 저장소/\n", options: { color: C.ON_DARK_ACCENT, fontFace: F.semi } },
   { text: "├─ CLAUDE.md            ", options: { color: "FFFFFF", fontFace: F.reg } },
-  { text: "← 맨 위에 \"작업 전 _기능별 경로 가이드.md 읽어라\" 1줄\n", options: { color: C.WMUTE, fontFace: F.reg } },
+  { text: "← 맨 위에 @import(@_기능별 경로 가이드.md) 로 자동 로드\n", options: { color: C.WMUTE, fontFace: F.reg } },
   { text: "└─ _기능별 경로 가이드.md    ", options: { color: "FFFFFF", fontFace: F.reg } },
   { text: "← 이 저장소의 기능 → 파일 매핑", options: { color: C.WMUTE, fontFace: F.reg } },
 ], { x: M + 0.35, y: 2.56, w: RIGHT - M - 0.7, h: 1.1, valign: "middle", fontSize: 12, lineSpacingMultiple: 1.35, margin: 0 });
 [
   "Claude에게 위키링크는 ‘클릭’이 아니라 그냥 글자 — 스스로 열지 않는다.",
-  "CLAUDE.md는 폴더 열 때 자동으로 읽는 유일한 파일 → 여기서 가리켜야 읽힌다.",
+  "CLAUDE.md에 @import(@_기능별 경로 가이드.md)로 걸면 매 세션 강제 로드 — 포인터의 ‘안 읽을 위험’ 제거.",
   "그 볼트에서 일하면 Claude가 파일을 바로 찾는다. (볼트 간 링크는 작동 안 함 → 저장소 안에 self-contained)",
 ].forEach((t, i) => {
   const y = 4.1 + i * 0.5;
@@ -179,14 +181,14 @@ s.addText([
 ], { x: M, y: 6.4, w: RIGHT - M, h: 0.4, valign: "middle", margin: 0 });
 
 /* 11. 예시 · 과정 */
-s = D.content(p, { eyebrow: "예시 · 과정", chapter: "07  cdbd-design-service", title: "끝까지 하면 — 과정",
-  lead: "저장소 1곳(추천: cdbd-design-service)을 예로.", page: "11" });
+s = D.content(p, { eyebrow: "예시 · 과정", chapter: "07  cdbd-templates", title: "끝까지 하면 — 과정",
+  lead: "저장소 1곳(예: cdbd-templates)을 예로.", page: "11" });
 const proc = [
-  ["기능 추출", "가이드 + 볼트 대조 → 이 저장소가 실제로 다루는 CdBd 기능만 추림 (콘텐츠 등록·URL 게시·이미지 라이브러리·카드 매핑·누끼 크롭)"],
+  ["기능 추출", "가이드 + 볼트 대조 → 이 저장소가 실제로 다루는 기능만 추림 (에디터 카드 자동화·카드 타입·상세페이지+어드민·시안 3안·섹션 프리셋)"],
   ["파일·섹션 확정", "각 기능 → 정확한 파일·섹션 + 경로 실재 검증 (진단서가 지적한 ‘표 경로 9개 오류’ 정정)"],
   ["경로 가이드 작성", "_기능별 경로 가이드.md 표로 정리 (기능 | 이렇게 말하면 | 파일·섹션 | 스킬화)"],
   ["연결", "CLAUDE.md 맨 위에 ‘_기능별 경로 가이드.md 먼저 읽어라’ 1줄"],
-  ["검증", "\"이 룩북 CdBd에 올려줘\" → Claude가 스스로 §등록 워크플로우 열고 7단계 수행"],
+  ["검증", "\"이 템플릿 상세페이지 만들어줘\" → Claude가 스스로 1-7. 템플릿 상세 페이지.md 열고 절차 수행"],
 ];
 let py = 2.5;
 proc.forEach(([t, d], i) => {
@@ -199,8 +201,8 @@ proc.forEach(([t, d], i) => {
 });
 
 /* 12. 예시 · 결과 */
-s = D.content(p, { eyebrow: "예시 · 결과", chapter: "07  cdbd-design-service", title: "예상 결과",
-  lead: "\"CdBd에 올려줘\" 한마디로 달라지는 것.", page: "12" });
+s = D.content(p, { eyebrow: "예시 · 결과", chapter: "07  cdbd-templates", title: "예상 결과",
+  lead: "\"카드 자동화 해줘\" 한마디로 달라지는 것.", page: "12" });
 const pw = (RIGHT - M - 0.4) / 2;
 s.addShape(p.ShapeType.roundRect, { x: M, y: 2.5, w: pw, h: 2.35, fill: { color: C.PARCH }, line: { color: C.HAIR, width: 1 }, rectRadius: 0.12 });
 s.addText("지금 (경로 가이드 없음)", { x: M + 0.3, y: 2.68, w: pw - 0.6, h: 0.35, fontFace: F.semi, fontSize: 14, color: C.MUTED, margin: 0 });
@@ -208,27 +210,39 @@ s.addText("· 어느 문서를 볼지 모름\n· 표 경로가 옛 파일명이�
   { x: M + 0.3, y: 3.15, w: pw - 0.6, h: 1.6, valign: "top", fontFace: F.reg, fontSize: 13, color: C.BODY, lineSpacingMultiple: 1.5, margin: 0 });
 s.addShape(p.ShapeType.roundRect, { x: M + pw + 0.4, y: 2.5, w: pw, h: 2.35, fill: { color: C.ACCENT }, line: { type: "none" }, rectRadius: 0.12 });
 s.addText("적용 후", { x: M + pw + 0.7, y: 2.68, w: pw - 0.6, h: 0.35, fontFace: F.semi, fontSize: 14, color: "FFFFFF", margin: 0 });
-s.addText("· 경로 가이드에서 바로 §등록 워크플로우로 진입\n· 폴더 확인 → 멀티페이지 → 카드 매핑 → URL·OG → 검증 → 게시 자동 흐름\n· 누가 시켜도 같은 결과",
+s.addText("· 경로 가이드에서 바로 카드 자동화 스킬·1-6-1. CdBd 에디터.md 로 진입\n· 카드 추가·삭제·복제·순서·핀·예약·링크 자동 처리\n· 누가 시켜도 같은 결과",
   { x: M + pw + 0.7, y: 3.15, w: pw - 0.6, h: 1.6, valign: "top", fontFace: F.reg, fontSize: 13, color: "FFFFFF", lineSpacingMultiple: 1.5, margin: 0 });
 s.addText("부수 결과", { x: M, y: 5.05, w: 10, h: 0.32, fontFace: F.semi, fontSize: 13, color: C.INK, margin: 0 });
-s.addText("· 진단서가 지적한 ‘핵심 문서 표 경로 9개 오류’ 정정   · ‘통계·개인화·버전기록 = 볼트에 없음’이 명시돼 다음 작업 목록이 생김\n· 소요 반나절 · 산출물 = _기능별 경로 가이드.md 1개 + CLAUDE.md 1줄 → 통하면 나머지 저장소로 복제",
+s.addText("· 이미 있는 스킬 5종 + 스킬 없는 기능이 한 지도로 연결   · ‘통계·개인화 = 볼트에 없음’이 명시돼 다음 작업 목록이 생김\n· 소요 반나절 · 산출물 = _기능별 경로 가이드.md 1개 + CLAUDE.md 1줄 → 통하면 나머지 저장소로 복제",
   { x: M, y: 5.4, w: RIGHT - M, h: 1.0, valign: "top", fontFace: F.reg, fontSize: 12, color: C.BODY, lineSpacingMultiple: 1.45, margin: 0 });
 
 /* 13. 예시 · 파일 실물 (NEW) */
-s = D.content(p, { eyebrow: "예시 · 파일 실물", chapter: "07  cdbd-design-service", title: "이 볼트의 ‘기능별 경로 가이드’는 이렇게",
-  lead: "위치 = cdbd-design-service/_기능별 경로 가이드.md  (저장소 루트, CLAUDE.md 옆)", page: "13" });
-drawTable(s, 2.45, ["기능", "이렇게 말하면", "정본 파일·섹션 (검증된 경로)", "스킬화"], [
-  ["룩북 시안 제작", "\"룩북 시안 만들어줘\"", "룩북/1. 제작 프로세스/1-2. 시안.md §제작 단계 8", "후보"],
-  ["룩북 초안 제작", "\"초안 만들어줘\"", "룩북/1. 제작 프로세스/1-3. 초안.md", "—"],
-  ["CdBd 콘텐츠 등록", "\"CdBd에 올려줘\"", "룩북/1. 제작 프로세스/1-4. CdBd 콘텐츠.md §등록 워크플로우", "후보"],
-  ["화보·상품 배치", "\"화보 배치해줘\"", "룩북/2. 디자인 가이드/2-4. 화보·상품.md", "—"],
-  ["소식지 제작", "\"소식지 만들어줘\"", "소식지/1. 제작 프로세스.md", "—"],
-], [2.05, 2.5, 5.7, 1.38], null, 0.52);
-s.addShape(p.ShapeType.roundRect, { x: M, y: 5.75, w: RIGHT - M, h: 0.8, fill: { color: C.ATINT }, line: { type: "none" }, rectRadius: 0.1 });
+s = D.content(p, { eyebrow: "예시 · 파일 실물", chapter: "07  cdbd-templates", title: "이 볼트의 ‘기능별 경로 가이드’는 이렇게",
+  lead: "위치 = cdbd-templates/_기능별 경로 가이드.md  (저장소 루트, CLAUDE.md 옆)", page: "13" });
+const KIND = { "CdBd 기능": C.ACCENT, "Figma 제작": C.MUTED };
+const rows13 = [
+  ["CdBd 기능", "\"카드 자동화 해줘\" (추가·순서·핀·예약)", "skills/cdbd-card-automation/ · 1-6-1. CdBd 에디터.md"],
+  ["CdBd 기능", "\"카드 타입 골라줘\"", "1. 작업 가이드/1-6-2. CdBd 카드 기능.md"],
+  ["CdBd 기능", "\"상세페이지·어드민 등록해줘\"", "1. 작업 가이드/1-7. 템플릿 상세 페이지.md"],
+  ["Figma 제작", "\"시안 3안 만들어줘\"", "skills/draft/ (에이전트 D1~D5)"],
+  ["Figma 제작", "\"섹션 프리셋 조립해줘\"", "1. 작업 가이드/1-8. 섹션 프리셋 라이브러리.md"],
+  ["Figma 제작", "\"팔레트·폰트 골라줘\"", "1. 작업 가이드/1-3. 색상 팔레트.md · 1-4. 폰트.md"],
+];
+const h13 = ["구분", "이렇게 말하면", "정본 파일·섹션 (검증된 경로)"].map(t => ({ text: t, options: { fill: { color: C.INK }, color: "FFFFFF", fontFace: F.semi, fontSize: 12, valign: "middle" } }));
+const b13 = rows13.map((r, i) => {
+  const fill = i % 2 ? C.WHITE : C.PARCH;
+  return [
+    { text: r[0], options: { fill: { color: fill }, color: KIND[r[0]], fontFace: F.semi, fontSize: 11.5 } },
+    { text: r[1], options: { fill: { color: fill }, color: C.INK, fontFace: F.reg, fontSize: 11.5 } },
+    { text: r[2], options: { fill: { color: fill }, color: C.BODY, fontFace: F.reg, fontSize: 11 } },
+  ];
+});
+s.addTable([h13, ...b13], { x: M, y: 2.4, w: RIGHT - M, colW: [1.55, 3.1, 6.98], border: { type: "solid", pt: 0.5, color: C.HAIR }, rowH: 0.5, valign: "middle", margin: [3, 8, 3, 8] });
+s.addShape(p.ShapeType.roundRect, { x: M, y: 5.95, w: RIGHT - M, h: 0.72, fill: { color: C.ATINT }, line: { type: "none" }, rectRadius: 0.1 });
 s.addText([
-  { text: "＋ 도구·규칙  ", options: { fontFace: F.semi, fontSize: 12, color: C.ACCENT } },
-  { text: "로그인 세션(gstack) · Supabase 직접 자동화 · image_library.py 헬퍼는 ‘기능’이 아니라 도구 → 파일 하단 ‘도구·규칙’ 섹션에 별도 기재.", options: { fontFace: F.reg, fontSize: 11.5, color: C.BODY } },
-], { x: M + 0.3, y: 5.85, w: RIGHT - M - 0.6, h: 0.6, valign: "middle", lineSpacingMultiple: 1.3, margin: 0 });
+  { text: "경로 가이드는 이 볼트의 일 전부를 CdBd 기능·Figma 제작·도구로 구분해 담습니다.  ", options: { fontFace: F.semi, fontSize: 11.5, color: C.ACCENT } },
+  { text: "이 볼트는 이미 스킬 5종 보유(card-automation·draft 등) → 경로 가이드는 스킬 없는 기능까지 ‘무슨 말→어느 파일’로 잇습니다.", options: { fontFace: F.reg, fontSize: 11, color: C.BODY } },
+], { x: M + 0.3, y: 6.05, w: RIGHT - M - 0.6, h: 0.58, valign: "middle", lineSpacingMultiple: 1.3, margin: 0 });
 
 /* 14. 플러그인 */
 s = D.content(p, { eyebrow: "확장 · 마지막 단계", chapter: "08  플러그인 제작·배포", title: "플러그인 — 어느 볼트에서나",
@@ -247,27 +261,31 @@ s.addText([
   { text: "     └─ 기능별 경로 가이드(공통) · 브랜드 토큰", options: { color: "FFFFFF", fontFace: F.reg } },
 ], { x: M + 0.35, y: 2.54, w: RIGHT - M - 0.7, h: 1.7, valign: "middle", fontSize: 11.5, lineSpacingMultiple: 1.28, margin: 0 });
 const bw = (RIGHT - M - 0.4) / 2;
-s.addShape(p.ShapeType.roundRect, { x: M, y: 4.55, w: bw, h: 1.95, fill: { color: C.PARCH }, line: { color: C.HAIR, width: 1 }, rectRadius: 0.1 });
+s.addShape(p.ShapeType.roundRect, { x: M, y: 4.55, w: bw, h: 1.68, fill: { color: C.PARCH }, line: { color: C.HAIR, width: 1 }, rectRadius: 0.1 });
 s.addText("새로 만드는 것", { x: M + 0.3, y: 4.7, w: bw - 0.6, h: 0.32, fontFace: F.semi, fontSize: 13, color: C.INK, margin: 0 });
 s.addText("· GitHub 저장소 1개 (private 권장)\n· 새 파일 2개: marketplace.json · plugin.json\n· 나머지는 기존 스킬·도구를 그대로 복사\n· 깨진 링크 정리 + 브랜드 토큰 동봉",
   { x: M + 0.3, y: 5.08, w: bw - 0.6, h: 1.35, valign: "top", fontFace: F.reg, fontSize: 11.5, color: C.BODY, lineSpacingMultiple: 1.4, margin: 0 });
-s.addShape(p.ShapeType.roundRect, { x: M + bw + 0.4, y: 4.55, w: bw, h: 1.95, fill: { color: C.ATINT }, line: { type: "none" }, rectRadius: 0.1 });
+s.addShape(p.ShapeType.roundRect, { x: M + bw + 0.4, y: 4.55, w: bw, h: 1.68, fill: { color: C.ATINT }, line: { type: "none" }, rectRadius: 0.1 });
 s.addText("팀원 설치 (1회)", { x: M + bw + 0.7, y: 4.7, w: bw - 0.6, h: 0.32, fontFace: F.semi, fontSize: 13, color: C.ACCENT, margin: 0 });
 s.addText([
   { text: "/plugin marketplace add CdBd-in/cdbd-plugin\n", options: { fontFace: F.med, fontSize: 11.5, color: C.INK } },
   { text: "/plugin install cdbd@cdbd-plugin\n", options: { fontFace: F.med, fontSize: 11.5, color: C.INK } },
   { text: "→ 어느 볼트·맨 바깥에서도 로드 · 자동 최신화", options: { fontFace: F.reg, fontSize: 11.5, color: C.BODY } },
-], { x: M + bw + 0.7, y: 5.08, w: bw - 0.6, h: 1.35, valign: "top", lineSpacingMultiple: 1.5, margin: 0 });
+], { x: M + bw + 0.7, y: 5.08, w: bw - 0.6, h: 1.15, valign: "top", lineSpacingMultiple: 1.5, margin: 0 });
+s.addText([
+  { text: "플러그인이 못 담는 것 — 로그인 정보  ", options: { fontFace: F.semi, fontSize: 11.5, color: C.ACCENT } },
+  { text: "→ ONBOARDING에 ‘Claude 셋업’ 챕터 + .env.example로 안내 (비밀 값은 각자 로컬).", options: { fontFace: F.reg, fontSize: 11.5, color: C.BODY } },
+], { x: M, y: 6.4, w: RIGHT - M, h: 0.35, valign: "middle", margin: 0 });
 
 /* 15. 다음 액션 (상세) */
 s = D.content(p, { eyebrow: "다음 액션", chapter: "09  누가 · 무엇을 · 지금", title: "이렇게 진행합니다",
   lead: "STEP 0(결정 2가지)만 주시면 → 제가 바로 STEP 1부터 시작합니다.", page: "15" });
 const na = [
-  ["STEP 0", "당신", "대분류 3개 확정 · 첫 저장소 = cdbd-design-service", "5분"],
+  ["STEP 0", "당신", "대분류 3개 확정 · 첫 저장소 = cdbd-templates", "5분"],
   ["STEP 1", "제가", "분류표 확정 (이 저장소 기능 ●◐○)", "0.5일"],
   ["STEP 2", "제가", "기능별 경로 가이드 작성 (파일·섹션 확정 + 경로 검증 + 표 9개 오류 정정)", "0.5일"],
   ["STEP 3", "제가", "그 저장소 CLAUDE.md에 연결 1줄", "5분"],
-  ["STEP 4", "같이", "검증 — \"이 룩북 CdBd에 올려줘\" 테스트", "10분"],
+  ["STEP 4", "같이", "검증 — \"이 템플릿 상세페이지 만들어줘\" 테스트", "10분"],
   ["STEP 5", "통과 후", "나머지 저장소 확산 → 플러그인 제작·배포", "이후"],
 ];
 const hna = ["", "누가", "무엇을", "소요"].map(t => ({ text: t, options: { fill: { color: C.INK }, color: "FFFFFF", fontFace: F.semi, fontSize: 12, valign: "middle" } }));
@@ -285,7 +303,7 @@ s.addTable([hna, ...bna], { x: M, y: 2.35, w: RIGHT - M, colW: [1.35, 1.2, 7.48,
 s.addShape(p.ShapeType.roundRect, { x: M, y: 6.0, w: RIGHT - M, h: 0.72, fill: { color: C.ATINT }, line: { type: "none" }, rectRadius: 0.1 });
 s.addText([
   { text: "지금 정할 것  ", options: { fontFace: F.semi, fontSize: 12.5, color: C.ACCENT } },
-  { text: "① 대분류 = 에디터·어드민·홈페이지 3개로 OK?   ② 첫 저장소 = cdbd-design-service로 OK?", options: { fontFace: F.reg, fontSize: 12, color: C.INK } },
+  { text: "① 대분류 = 에디터·어드민·홈페이지 3개로 OK?   ② 첫 저장소 = cdbd-templates로 OK?", options: { fontFace: F.reg, fontSize: 12, color: C.INK } },
 ], { x: M + 0.3, y: 6.08, w: RIGHT - M - 0.6, h: 0.56, valign: "middle", margin: 0 });
 
 p.writeFile({ fileName: OUT }).then(f => console.log("saved", f));
