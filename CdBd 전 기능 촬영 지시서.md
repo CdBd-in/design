@@ -11,7 +11,6 @@ tags:
   - 경로가이드
 related:
   - "[[CdBd 기능 사전 (공통).md]]"
-  - "[[_Claude 자기진단표 — CdBd 기능 확신도.md]]"
   - "[[CdBd 기능 영상 녹화 가이드.md]]"
 ---
 
