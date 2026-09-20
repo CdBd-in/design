@@ -25,6 +25,34 @@ related:
 
 ---
 
+## 0-0-1. 🖥 **CdBd 화면을 직접 조작할 수 있다** — 「수단이 없다」고 답하지 말 것
+
+> 🚨 **2026-09-21 B단계에서 적발.** 세션이 *"저는 문서 볼트 에이전트라 CdBd 화면을 직접 누를 수 없습니다"* 라고 답했다.
+> **사실이 아니다.** 실제로 2026-09-21에 헤드리스 브라우저로 로그인 → 에디터 진입 → 카드 토글·핀·순서 변경·이미지 모달 개방까지 전부 수행했다.
+
+| 수단 | 경로 | 용도 |
+|---|---|---|
+| **헤드리스 브라우저** | `~/.claude/skills/gstack/browse/dist/browse` (볼트의 `$B`) | 로그인 · 에디터 조작 · 화면 확인 |
+| **카드 드라이버** | `[T] cdbd-templates/.claude/skills/cdbd-card-automation/card-driver.js` | 주입 후 `window.__cdbd.*` 로 카드 조작 |
+| **Supabase REST** | `~/.config/cdbd/credentials.json` + `auth.py` | 데이터 직접 조회·수정 |
+
+**최소 절차**
+```bash
+B=~/.claude/skills/gstack/browse/dist/browse
+$B goto "https://www.cdbd.in/login"
+$B fill "#email" "<이메일>"; $B fill "#password" "<비밀번호>"; $B press Enter
+$B goto "https://www.cdbd.in/editor/<id>"     # 목록 카드 클릭은 헤드리스에서 안 먹는다
+$B eval <card-driver.js 경로>                  # → "installed"
+$B js "JSON.stringify(window.__cdbd.dumpState())"
+```
+
+> 🔑 **자동화가 실패하면 「불가능」이 아니라 「인증 만료」부터 의심**한다 → `[SV] _기능별 경로 가이드 §4-2`
+> 🚨 **에디터는 자동저장**이다. 남의 문서에서 검증할 때는 **기준선을 먼저 뜨고**(`dumpState()`) **끝나면 원복 검증**할 것.
+> 💰 **과금 행위(게시·URL 생성·개별 URL·주소 변경)는 실행 직전에 반드시 사용자 승인**을 받는다.
+> 🔴 **「불가능」이라 쓰기 전에 ① 정본 검색 ② 사용자에게 확인** — 2026-09-08(A5)·2026-09-21(A7)에 이미 두 번 틀렸다.
+
+---
+
 ## 0-0. 어느 볼트가 무엇을 담당하나
 
 > 📌 **2026-09-20 — 「CdBd 기능 목록.md」에서 흡수.** 그 문서는 ●◐○(문서가 있나) 축이었는데 **📹(영상 실측)로 대체**돼 폐기했다.
