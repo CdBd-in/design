@@ -22,6 +22,8 @@
   --claudian-error: #dc3545;
   --claudian-error-rgb: 220, 53, 69;
   --claudian-compact: #5bc0de;
+  /* Shared side-chat accent; formerly the instruction-mode border colour. */
+  --claudian-side-chat: #60a5fa;
 }
 
 body.theme-light .claudian-container {
@@ -1762,7 +1764,8 @@ button.claudian-text-copy-btn.copied {
 }
 
 /* Completed turn history and message actions */
-.claudian-work {
+.claudian-work,
+.claudian-task-notification {
   margin-bottom: 10px;
 }
 
@@ -1833,10 +1836,11 @@ button.claudian-work-header:disabled {
   pointer-events: none;
 }
 
+/* Focus reveals the row only from its own buttons: collapsible headers elsewhere in
+   the turn keep DOM focus after a click and would otherwise pin the row open. */
 .claudian-message:hover > .claudian-message-actions,
-.claudian-message:focus-within > .claudian-message-actions,
 .claudian-message-images:hover > .claudian-message-actions,
-.claudian-message-images:focus-within > .claudian-message-actions {
+.claudian-message-actions:focus-within {
   opacity: 1;
   pointer-events: auto;
 }
@@ -3206,10 +3210,16 @@ button.claudian-input-nav-btn[aria-disabled='true'] {
   color: currentColor;
 }
 
-/* Light blue border when instruction mode is active */
+/* Green border when instruction mode is active */
 .claudian-input-wrapper.claudian-input-instruction-mode {
-  --claudian-input-wrapper-border-color: #60a5fa;
-  --claudian-input-wrapper-box-shadow: 0 0 0 1px #60a5fa;
+  --claudian-input-wrapper-border-color: var(--color-green);
+  --claudian-input-wrapper-box-shadow: 0 0 0 1px var(--color-green);
+}
+
+/* Side-chat colour preview while the command is only typed. */
+.claudian-input-wrapper.claudian-input-side-chat-preview {
+  --claudian-input-wrapper-border-color: var(--claudian-side-chat);
+  --claudian-input-wrapper-box-shadow: 0 0 0 1px var(--claudian-side-chat);
 }
 
 
@@ -3659,6 +3669,201 @@ button.claudian-input-nav-btn[aria-disabled='true'] {
 .claudian-composer-dropdown::-webkit-scrollbar-thumb {
   background: var(--background-modifier-border);
   border-radius: 3px;
+}
+
+
+/* ============================================
+   components/side-chat.css
+   ============================================ */
+/* Side chat panel and its shared border with the composer */
+
+.claudian-side-chat {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.claudian-input-nav-content > .claudian-side-chat-chip-slot {
+  flex: 1 1 auto;
+  min-width: 0;
+  margin-inline-end: 8px;
+}
+
+.claudian-side-chat-chip-slot:empty {
+  display: none;
+}
+
+.claudian-input-nav-content .claudian-side-chat-status {
+  margin-bottom: 0;
+}
+
+/* Collapsed: a compact chip leaves the main composer visually independent. */
+.claudian-side-chat-status {
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  max-width: 100%;
+  min-width: 0;
+  margin: 0 0 4px 0;
+}
+
+.claudian-side-chat-status button.claudian-side-chat-status-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
+  width: auto;
+  max-width: 100%;
+  min-width: 0;
+  height: 24px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  color: var(--text-muted);
+  font: inherit;
+  font-size: var(--font-ui-smaller);
+  text-align: start;
+  cursor: pointer;
+}
+
+.claudian-side-chat-status button.claudian-side-chat-status-toggle:is(:hover, :focus-visible, :active) {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  color: var(--text-normal);
+}
+
+.claudian-side-chat-status-icon {
+  display: inline-flex;
+  flex: 0 0 auto;
+  color: var(--claudian-side-chat);
+}
+
+.claudian-side-chat-status-icon svg {
+  width: 14px;
+  height: 14px;
+  color: currentColor;
+}
+
+.claudian-side-chat-status-text {
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.claudian-side-chat[data-side-chat-status="working"] .claudian-side-chat-status-icon svg,
+.claudian-side-chat[data-side-chat-status="preparing"] .claudian-side-chat-status-icon svg {
+  animation: claudian-spin 1.2s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .claudian-side-chat[data-side-chat-status="working"] .claudian-side-chat-status-icon svg,
+  .claudian-side-chat[data-side-chat-status="preparing"] .claudian-side-chat-status-icon svg {
+    animation: none;
+  }
+}
+
+.claudian-side-chat:not(.claudian-side-chat--expanded) + .claudian-input-container {
+  padding-top: 0;
+}
+
+/* Expanded: one outer border wraps the panel and the composer together. */
+.claudian-input-composer.claudian-side-chat-expanded {
+  border: 1px solid var(--claudian-side-chat);
+  border-radius: 6px;
+  padding: 8px;
+}
+
+.claudian-input-composer.claudian-side-chat-expanded > .claudian-input-container {
+  padding-top: 8px;
+}
+
+.claudian-side-chat-panel {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  max-height: 40vh;
+}
+
+.claudian-side-chat-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 0 6px 0;
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.claudian-side-chat-title {
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: var(--font-ui-small);
+  font-weight: var(--font-semibold);
+  color: var(--text-normal);
+}
+
+.claudian-side-chat-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-inline-start: auto;
+  flex-shrink: 0;
+}
+
+.claudian-side-chat-actions button.claudian-side-chat-icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  color: var(--text-muted);
+  font: inherit;
+  font-size: var(--font-ui-smaller);
+  cursor: pointer;
+}
+
+.claudian-side-chat-actions button.claudian-side-chat-icon-button:is(:hover, :focus-visible, :active) {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  color: var(--text-normal);
+}
+
+.claudian-side-chat-actions button.claudian-side-chat-icon-button[disabled] {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  color: var(--text-faint);
+  cursor: default;
+}
+
+.claudian-side-chat-actions button.claudian-side-chat-icon-button svg {
+  width: 14px;
+  height: 14px;
+  color: currentColor;
+}
+
+.claudian-side-chat-messages {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px 0;
+}
+
+.claudian-side-chat-prompts:empty {
+  display: none;
 }
 
 
@@ -7959,8 +8164,7 @@ button.claudian-fork-target-option:disabled {
 }
 
 /* Custom section descriptions - align with items */
-.claudian-sp-settings-desc,
-.claudian-plugin-settings-desc {
+.claudian-sp-settings-desc {
   padding: 0 12px;
 }
 
@@ -8738,137 +8942,6 @@ button.claudian-fork-target-option:disabled {
 
 
 /* ============================================
-   settings/plugin-settings.css
-   ============================================ */
-/* Plugin Settings */
-.claudian-plugin-settings-desc {
-  margin-bottom: 12px;
-}
-
-.claudian-plugins-container {
-  margin-top: 8px;
-}
-
-.claudian-plugin-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 12px;
-  padding: 0 12px;
-}
-
-.claudian-plugin-label {
-  font-size: var(--font-ui-small);
-  color: var(--text-muted);
-  font-weight: var(--font-medium);
-}
-
-.claudian-plugin-empty {
-  padding: 16px;
-  text-align: center;
-  color: var(--text-muted);
-  font-size: 13px;
-  background: var(--background-secondary);
-  border-radius: 6px;
-}
-
-.claudian-plugin-list {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.claudian-plugin-section-header {
-  font-size: 11px;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  padding: 8px 12px 4px;
-  font-weight: 600;
-}
-
-.claudian-plugin-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  padding: 10px 12px;
-  background: var(--background-secondary);
-  border-radius: 6px;
-  transition: background 0.15s ease;
-}
-
-.claudian-plugin-item:hover {
-  background: var(--background-modifier-hover);
-}
-
-.claudian-plugin-item-disabled {
-  opacity: 0.6;
-}
-
-.claudian-plugin-status {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  margin-top: 6px;
-  flex-shrink: 0;
-}
-
-.claudian-plugin-status-enabled {
-  background: var(--color-green);
-}
-
-.claudian-plugin-status-disabled {
-  background: var(--text-muted);
-}
-
-.claudian-plugin-info {
-  flex: 1;
-  min-width: 0;
-}
-
-.claudian-plugin-name-row {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
-.claudian-plugin-name {
-  font-weight: 600;
-}
-
-.claudian-plugin-actions {
-  display: flex;
-  gap: 4px;
-  flex-shrink: 0;
-}
-
-.claudian-plugin-action-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 28px;
-  height: 28px;
-  padding: 0;
-  border: none;
-  background: transparent;
-  border-radius: 4px;
-  cursor: pointer;
-  color: var(--text-muted);
-  transition: background 0.15s ease, color 0.15s ease;
-}
-
-.claudian-plugin-action-btn:hover {
-  background: var(--background-modifier-hover);
-  color: var(--text-normal);
-}
-
-.claudian-plugin-action-btn svg {
-  width: 14px;
-  height: 14px;
-}
-
-
-/* ============================================
    settings/agent-settings.css
    ============================================ */
 /* Agent Settings — all structural rules live in base.css .claudian-sp-* */
@@ -9499,8 +9572,6 @@ button.claudian-fork-target-option:disabled {
 
 .claudian-settings :is(
   .claudian-sp-label,
-  .claudian-plugin-label,
-  .claudian-plugin-section-header,
   .claudian-snippet-label,
   .claudian-context-limits-label,
   .claudian-provider-model-picker-selected-label,
@@ -9517,7 +9588,6 @@ button.claudian-fork-target-option:disabled {
 
 .claudian-settings :is(
   .claudian-sp-header,
-  .claudian-plugin-header,
   .claudian-snippet-header,
   .claudian-context-limits-header
 ) {
@@ -9528,7 +9598,6 @@ button.claudian-fork-target-option:disabled {
 
 .claudian-settings :is(
   .claudian-sp-settings-desc,
-  .claudian-plugin-settings-desc,
   .claudian-context-limits-desc,
   .claudian-provider-model-picker-summary
 ) {
@@ -9538,8 +9607,6 @@ button.claudian-fork-target-option:disabled {
 .claudian-settings :is(
   .claudian-sp-item,
   .claudian-sp-empty-state,
-  .claudian-plugin-item,
-  .claudian-plugin-empty,
   .claudian-snippet-item,
   .claudian-context-limits-item,
   .claudian-provider-model-picker-selected-row,
@@ -9549,7 +9616,6 @@ button.claudian-fork-target-option:disabled {
 ),
 .claudian-settings :is(
   .claudian-sp-item,
-  .claudian-plugin-item,
   .claudian-snippet-item,
   .claudian-context-limits-item,
   .claudian-hotkey-item
@@ -9557,7 +9623,7 @@ button.claudian-fork-target-option:disabled {
   background: transparent;
 }
 
-.claudian-settings :is(.claudian-sp-item, .claudian-plugin-item, .claudian-snippet-item) {
+.claudian-settings :is(.claudian-sp-item, .claudian-snippet-item) {
   padding: var(--size-4-3);
   border: 1px solid var(--background-modifier-border);
   border-radius: var(--radius-m);
