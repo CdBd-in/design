@@ -59,7 +59,7 @@ related:
 |---|---|---|
 | **헤드리스 브라우저** | `~/.claude/skills/gstack/browse/dist/browse` (볼트의 `$B`) | 로그인 · 에디터 조작 · 화면 확인 |
 | **카드 드라이버** | `[T] cdbd-templates/.claude/skills/cdbd-card-automation/card-driver.js` | 주입 후 `window.__cdbd.*` 로 카드 조작 |
-| **Supabase REST** | `~/.config/cdbd/credentials.json` + `auth.py` | 데이터 직접 조회·수정 |
+| **Supabase REST** | `~/.config/cdbd/credentials.json` + `auth.py`(정본 `design/tools/cdbd/` · 만료 시 `cdbd.env`로 자동 재로그인) | 데이터 직접 조회·수정 |
 
 **최소 절차**
 ```bash
