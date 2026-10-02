@@ -61,7 +61,7 @@ done
 
 echo "2. gstack (헤드리스 브라우저)"
 if [ -x "$CLAUDE_DIR/skills/gstack/browse/dist/browse" ]; then ok "gstack browse"
-else die "gstack이 없습니다 — $CLAUDE_DIR/skills/gstack 설치 후 다시 실행하세요 (ONBOARDING 「Claude 셋업」)"; fi
+else die "gstack이 없습니다 — $CLAUDE_DIR/skills/gstack 설치 후 다시 실행하세요 (ONBOARDING §3-6 Step 3)"; fi
 
 echo "3. 전역 스킬"
 link_safe "$ROOT/cdbd-templates/.claude/skills/cdbd-card-automation" "$CLAUDE_DIR/skills/cdbd-card-automation" "cdbd-card-automation"
@@ -132,4 +132,4 @@ fi
 echo
 echo "완료 — ✅ $N_OK · 🔧 고침 $N_FIX · ⚠️ 확인 필요 $N_WARN"
 [ "$N_WARN" -eq 0 ] || echo "⚠️ 항목을 해결한 뒤 다시 실행하면 됩니다."
-echo "다음: 폴더 신뢰 승인(볼트마다 claude 한 번 실행 → 「Yes, proceed」) — ONBOARDING 「Claude 셋업」"
+echo "다음: 폴더 신뢰 승인(볼트마다 claude 한 번 실행 → 「Yes, proceed」) — ONBOARDING §3-6 Step 6"

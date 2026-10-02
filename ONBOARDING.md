@@ -64,7 +64,7 @@ design/                          ← 허브 저장소 · 공통 문서 보관
 3. **macOS 터미널 사용 가능** — 기본 설치된 `터미널` 앱(또는 iTerm2)으로 명령어 몇 줄을 칠 수 있어야 합니다.
    본 문서의 명령어는 **그대로 복사·붙여넣기**하면 동작합니다.
 
-> 💡 셋업에 약 30~40분 정도 걸립니다. 한 번에 마치는 것을 추천합니다.
+> 💡 셋업에 약 30~40분 정도 걸립니다(Claude 셋업 3-6까지 하면 +20~30분). 한 번에 마치는 것을 추천합니다.
 
 ---
 
@@ -230,7 +230,96 @@ ls
    - **Pull on startup**: ON
 6. 검증: `⌘+P` → `Obsidian Git: Commit-and-sync` 실행 → `No changes to commit` 메시지가 뜨면 OK.
 
-이게 끝나면 셋업 완료입니다. 이제 동기화는 **자동**으로 됩니다.
+여기까지가 **문서 동기화** 셋업입니다. 이제 동기화는 **자동**으로 됩니다.
+Claude로 CdBd 작업(에디터 자동화·기능 질문)을 하려면 이어서 **3-6**을 진행하세요.
+
+### 3-6. Claude 셋업 — CdBd 자동화 (약 20~30분)
+
+> 이 절을 마치면: 어느 볼트에서 Claude(Claudian)를 켜도 **팀 공통 규칙 · 기능 사전 · 카드 자동화 스킬**이 실리고,
+> CdBd 에디터를 **헤드리스 브라우저로 직접 조작**할 수 있습니다. 마지막에 점검표가 **전부 ✅**면 끝입니다.
+
+**준비물** — 담당자에게 받을 것 2가지
+1. **CdBd 공용 계정**(이메일·비밀번호) — 1Password 등 안전한 방법으로.
+2. **내 전용 테스트 페이지 주소**(`https://www.cdbd.in/editor/숫자`) — 공용 계정이라 **남의 작업 페이지를 건드리지 않도록** 사람마다 하나씩 정합니다.
+
+🔴 **다른 사람의 `~/.config/cdbd/credentials.json`을 복사해 받지 마세요.** 그 안의 로그인 토큰은 쓸 때마다 바뀌어서, 복사본을 쓰는 순간 원래 기기의 로그인이 풀립니다. 이 셋업이 내 기기용 토큰을 **자동으로 새로 받습니다.**
+
+**Step 1. Claude Code 설치·로그인** (Claudian이 내부에서 이것을 씁니다)
+
+```bash
+curl -fsSL https://claude.ai/install.sh | bash
+claude          # 처음 실행 → 브라우저로 로그인 → 끝나면 /exit
+```
+
+**Step 2. Claudian 플러그인** — 6개 볼트 모두에 있어야 합니다.
+허브(`design`)와 `cdbd-design-service`에는 저장소에 들어 있어 이미 있습니다. 나머지 4개는 허브에서 복사합니다:
+
+```bash
+cd ~/Documents/GitHub/design
+for v in cdbd-design-system cdbd-marketing cdbd-templates makevu-qrstp; do
+  mkdir -p "$v/.obsidian/plugins" && cp -R .obsidian/plugins/realclaudian "$v/.obsidian/plugins/"
+done
+```
+옵시디언에서 각 볼트를 다시 열고 `설정 > 커뮤니티 플러그인`에서 **Claudian**이 켜져 있는지 확인합니다.
+Claudian 설정의 **「사용자 설정 불러오기」(Load user settings)는 켜 둡니다**(기본값 켜짐) — 꺼져 있으면 아래 Step 4의 전역 설정이 안 읽힙니다.
+
+**Step 3. gstack 설치** (헤드리스 브라우저 — Claude가 CdBd 화면을 직접 조작할 때 씀)
+
+```bash
+command -v bun || curl -fsSL https://bun.sh/install | bash      # Bun이 없으면 설치 → 터미널을 새로 열기
+git clone --single-branch --depth 1 https://github.com/garrytan/gstack.git ~/.claude/skills/gstack
+cd ~/.claude/skills/gstack && ./setup
+```
+
+**Step 4. 셋업 스크립트 실행** — 몇 번 다시 실행해도 안전합니다.
+
+```bash
+bash ~/Documents/GitHub/design/tools/cdbd-setup.sh
+```
+처음엔 `⚠️ cdbd.env 견본을 만들었습니다`가 나옵니다 → Step 5로.
+(이 스크립트가 하는 일: 저장소 확인 · 카드 자동화 스킬 전역 연결 · 인증 헬퍼 연결 · 전역 안내 연결 · 세션 시작 점검 등록)
+
+**Step 5. `cdbd.env` 채우기** — 공용 계정 정보를 넣는 파일입니다(볼트 밖 · git에 안 올라감).
+
+```bash
+open -e ~/.config/cdbd/cdbd.env
+```
+- `CDBD_EMAIL` · `CDBD_PASSWORD` — 준비물 1의 공용 계정
+- `CDBD_SUPABASE_URL` · `CDBD_SUPABASE_ANON_KEY` — 담당자에게 받거나, 다른 팀원의 `cdbd.env`에서 이 두 줄을 그대로 옮깁니다(🟢 `cdbd.env`는 옮겨도 됩니다 · `credentials.json`만 안 됩니다)
+- `FIGMA_PAT` — 비워 둬도 됩니다(Figma REST 스크립트를 쓸 때만 · 각자 발급)
+
+저장한 뒤 **Step 4를 한 번 더** 실행 → 마지막 줄이 `⚠️ 확인 필요 0`이면 성공입니다.
+
+**Step 6. 폴더 신뢰 승인** — 볼트마다 한 번. 승인 전에는 볼트의 Claude 허용 설정이 무시됩니다.
+
+```bash
+cd ~/Documents/GitHub/design && claude
+```
+`Do you trust the files in this folder?` → **`1. Yes, proceed`** Enter → 입력창이 나오면 `/exit` Enter.
+같은 것을 아래 5개 폴더에서도 반복합니다(`cd` 경로만 바꿔서):
+`design/cdbd-templates` · `design/cdbd-design-service` · `design/cdbd-design-system` · `design/cdbd-marketing` · `design/makevu-qrstp`
+
+**Step 7. Figma 연결** — 계정 단위라 기기마다 할 필요는 없습니다.
+claude.ai → 설정 → **커넥터** → **Figma** 연결(이미 연결돼 있으면 건너뜀).
+
+**Step 8. 점검표 — 전부 ✅이면 끝**
+
+```bash
+bash ~/Documents/GitHub/design/tools/cdbd-doctor.sh
+```
+마지막 줄이 `결과 — ✅ 28 · ⚠️ 0 · ❌ 0`이면 완료입니다. ❌ 줄에는 무엇을 하면 되는지(→ 안내)가 함께 나옵니다.
+
+**Step 9. 확인 질문** — 옵시디언에서 아무 볼트나 열고 Claudian에 물어봅니다:
+> 「개별 URL에서 이름 칸이 비면 대체어가 나오죠?」
+
+→ **「아니요」로 시작해 「빈칸으로 나온다」**고 바로잡으면 정상입니다(팀 규칙과 기능 사전이 실려 있다는 뜻).
+담당자는 볼트 밖 채점표로 `검증/수용테스트.sh` 전체를 돌려 확인할 수 있습니다.
+
+> 🔁 **그 뒤 — 매일**: 따로 할 일은 없습니다. 3일 넘게 저장소를 안 받았거나 인증에 문제가 생기면 Claude가 세션을 시작할 때 한 줄로 알려 줍니다
+> → `bash ~/Documents/GitHub/design/tools/cdbd-sync.sh`(6개 저장소 받기) · `bash ~/Documents/GitHub/design/tools/cdbd-doctor.sh`(점검).
+> 💰 **공용 계정입니다** — 게시·URL 생성·개별 URL·팀원 초대처럼 크레딧이 드는 일은 Claude가 실행 전에 금액을 말하고 확인을 받습니다. 테스트는 **내 전용 테스트 페이지에서만** 합니다.
+
+이게 끝나면 셋업 완료입니다.
 
 ---
 
