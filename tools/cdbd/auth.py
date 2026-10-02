@@ -12,6 +12,7 @@
     cdbd.env (mode 600 · 기기끼리 옮겨도 됨 — 공용 계정 정보)
         CDBD_EMAIL, CDBD_PASSWORD               ← 자동 재로그인용
         CDBD_SUPABASE_URL, CDBD_SUPABASE_ANON_KEY ← credentials.json이 없을 때 첫 발급용
+        FIGMA_PAT (선택)                          ← Figma REST 스크립트용 · 각자 발급(90일)
 
 동작:
     1) credentials.json의 refresh_token으로 새 access_token 발급(회전된 refresh_token 저장)
@@ -68,7 +69,7 @@ def _env():
                     continue
                 k, v = line.split('=', 1)
                 out[k.strip()] = v.strip().strip('"').strip("'")
-    for k in ('CDBD_EMAIL', 'CDBD_PASSWORD', 'CDBD_SUPABASE_URL', 'CDBD_SUPABASE_ANON_KEY'):
+    for k in ('CDBD_EMAIL', 'CDBD_PASSWORD', 'CDBD_SUPABASE_URL', 'CDBD_SUPABASE_ANON_KEY', 'FIGMA_PAT'):
         if os.environ.get(k):
             out[k] = os.environ[k]
     return out
@@ -167,7 +168,7 @@ def get_credentials(force_refresh=False):
         'anon_key': cred['supabase_anon_key'],
         'access_token': token,
         'user_id': cred['user_id'],
-        'figma_pat': cred.get('figma_pat'),
+        'figma_pat': cred.get('figma_pat') or _env().get('FIGMA_PAT'),  # credentials.json 우선 · 없으면 cdbd.env
     })
     return _cache
 
