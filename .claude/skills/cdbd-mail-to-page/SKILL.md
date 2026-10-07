@@ -78,9 +78,9 @@ description: Use when the user asks to turn an email request into a published Cd
 - 오른쪽 `A01` — **그 브랜드의 대표 이미지**(세로형). 메일 첨부에서 고르고 `upload_assets`로 올린다. 🚫 예시 파일의 랙앤본 사진을 그대로 두지 않는다 · 쓸 이미지가 없으면 회색 자리표시로 두고 G1에서 받는다
 - 세부 값(여백·이미지 크기·위치)은 **기존 브랜드 파일의 `Cover`를 `use_figma`로 읽어** 맞춘다(읽기만 · 원본은 건드리지 않는다)
 
-**확인하고 넘어간다** — 파일 URL · 이름 · 썸네일 지정 성공 · 위치가 CdBd_Service인지. 하나라도 안 되면 **시안으로 넘어가지 말고** 사용자에게 무엇이 안 됐는지 말한다(예: `projectId`를 모르면 「CdBd_Service 폴더 URL을 알려 주세요」 — Figma에서 그 폴더를 열면 주소창이 `figma.com/files/…/project/{숫자}` 형태).
+**확인하고 넘어간다** — 파일 URL · 이름 · 썸네일 지정 성공 · 위치가 CdBd_Service인지. 하나라도 안 되면 **시안으로 넘어가지 말고** 사용자에게 무엇이 안 됐는지 말한다(예: `projectId`를 모르면 「CdBd_Service 폴더 URL을 알려 주세요」 — Figma에서 그 폴더를 열면 주소창이 `figma.com/files/team/…/folder/{숫자}` 형태).
 
-> 📌 **CdBd_Service `projectId`** = ⏳ 아직 미기록 — 처음 받으면 **이 줄에 숫자를 적어 커밋**한다.
+> 📌 **CdBd_Service `projectId` = `532754290`** (팀 CdBd `899267143886282181` · URL `https://www.figma.com/files/team/899267143886282181/folder/532754290` · 2026-10-07 사용자 제공). Figma 새 UI는 주소에 `project/` 대신 **`folder/`**로 표시된다 — 숫자는 같은 값이다.
 
 ## 3. Figma 시안 — 🔑 CdBd 에디터로 구현 가능한 것만
 
