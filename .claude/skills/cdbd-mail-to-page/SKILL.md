@@ -69,7 +69,7 @@ description: Use when the user asks to turn an email request into a published Cd
 |---|---|---|
 | ① 파일 생성 | Figma 홈(팀 **CdBd · Professional**) → **[+ Design]** | `create_new_file` · `editorType: "design"` · `planKey: "team::899267143886282181"`(whoami의 **pro** 플랜 — starter 플랜 3개와 혼동 금지) |
 | ② 파일 이름 | 좌상단 파일명 → **`브랜드명_제작년도+월`** | `fileName` = **`{브랜드명}_{YYMM}`** — 예 `랙앤본_2610` · YYMM = **제작하는 달**(2026년 10월 → `2610`) · 브랜드명은 메일의 표기(한글이면 한글) · 기존 파일 `슬로웨어_2608` · `코사_2608` 등과 같은 규칙 |
-| ③ 썸네일 | 기존 파일(`랙앤본_2610`)의 **`Cover`** 프레임을 복사해 붙이고 → 글자 교체 → `Cover` 우클릭 **[Set as thumbnail]** | `use_figma`로 **`Cover` 프레임을 새로 만든다**(파일 간 복사는 API로 안 됨) → `await figma.setFileThumbnailNodeAsync(cover)` |
+| ③ 썸네일 | 기존 파일(`랙앤본_2610`)의 **`Cover`** 프레임을 복사해 붙이고 → 글자 교체 → `Cover` 우클릭 **[Set as thumbnail]** | `use_figma`로 **`Cover` 프레임을 새로 만든다**(파일 간 복사는 API로 안 됨) · 🔴 **썸네일 지정은 자동화 불가** — `figma.setFileThumbnailNodeAsync`는 MCP에서 「not a supported API」(2026-10-07 실측) → **사용자에게 「`Cover` 우클릭 → Set as thumbnail」을 요청**하고 계속 진행(시안 작업을 막지 않는다) |
 | ④ 위치 | 파일명 옆 ▾ → **[Move file…]** → **`CdBd_Service`**(팀 CdBd) → [Move] → 「File moved · Moved to CdBd_Service」 | `create_new_file`에 **`projectId` = CdBd_Service**를 넣어 **처음부터 그 폴더에** 만든다(옮기기 API는 없다) |
 
 **`Cover` 프레임 규격** (영상 실측 · 기존 `랙앤본_2610`과 동일하게)
@@ -78,24 +78,28 @@ description: Use when the user asks to turn an email request into a published Cd
 - 오른쪽 `A01` — **그 브랜드의 대표 이미지**(세로형). 메일 첨부에서 고르고 `upload_assets`로 올린다. 🚫 예시 파일의 랙앤본 사진을 그대로 두지 않는다 · 쓸 이미지가 없으면 회색 자리표시로 두고 G1에서 받는다
 - 세부 값(여백·이미지 크기·위치)은 **기존 브랜드 파일의 `Cover`를 `use_figma`로 읽어** 맞춘다(읽기만 · 원본은 건드리지 않는다)
 
-**확인하고 넘어간다** — 파일 URL · 이름 · 썸네일 지정 성공 · 위치가 CdBd_Service인지. 하나라도 안 되면 **시안으로 넘어가지 말고** 사용자에게 무엇이 안 됐는지 말한다(예: `projectId`를 모르면 「CdBd_Service 폴더 URL을 알려 주세요」 — Figma에서 그 폴더를 열면 주소창이 `figma.com/files/team/…/folder/{숫자}` 형태).
+**확인하고 넘어간다** — 파일 URL · 이름 · `Cover` 생성 · 위치가 CdBd_Service인지(썸네일은 사용자 요청으로 넘긴다). 하나라도 안 되면 **시안으로 넘어가지 말고** 사용자에게 무엇이 안 됐는지 말한다(예: `projectId`를 모르면 「CdBd_Service 폴더 URL을 알려 주세요」 — Figma에서 그 폴더를 열면 주소창이 `figma.com/files/team/…/folder/{숫자}` 형태).
 
 > 📌 **CdBd_Service `projectId` = `532754290`** (팀 CdBd `899267143886282181` · URL `https://www.figma.com/files/team/899267143886282181/folder/532754290` · 2026-10-07 사용자 제공). Figma 새 UI는 주소에 `project/` 대신 **`folder/`**로 표시된다 — 숫자는 같은 값이다.
 
 ## 3. Figma 시안 — 🔑 CdBd 에디터로 구현 가능한 것만
 
 - **항상 Figma에 먼저 만든다.** 에디터에 바로 만들지 않는다. **3-0에서 만든 브랜드 파일 안에** 그린다 — `draft` 스킬의 기본 산출 위치(섹션 파일 「조합 테스트」)가 아니라 **이 파일의 `Page 1`, `Cover` 아래**(또는 `시안` 페이지).
-- 스킬 **`draft`**를 불러 그 절차대로 3안을 만든다(D1 내용 → D2 조합 → D3 통일 → D4 무드 → D5 검수). 입력 = 2번 요청서.
+- 🔑 **요청 종류로 절차를 고른다** (2026-10-07 끌로디 시험에서 확정)
+  - **패션 룩북 · EDM · 카탈로그**(화보 + 상품 리스트 · 380×580 멀티) → **`cdbd-design-service` 룩북 시안 절차** `룩북/1. 제작 프로세스/1-2. 시안.md` 「제작 단계 8단계」 + `2. 디자인 가이드/2-1·2-2·2-4` — **A·B 2안**, 각 안 = 시안 표지 · 01 표지 · (02 소개) · 03 내지. 페이지 = 380×580 통 이미지 1장(이미지 카드). 02는 문서(견적서 페이지 구성 등)에 없으면 생략
+  - **CdBd 템플릿형 페이지**(카드로 조립하는 초대장·명함·이벤트 등) → 스킬 **`draft`**(D1 내용 → D2 조합 → D3 통일 → D4 무드 → D5 검수)
+- 입력 = 2번 요청서.
 - **구현 가능성 = 필수 통과 조건.** `cdbd-draft-shared.md` 「🧱 CdBd-legal」과 `cdbd-templates/CLAUDE.md`를 따른다. 요지만:
   - **평면 카드 스택** — 모든 요소가 CdBd 카드(기본 14종 + 2열 6종) 하나에 대응 · 카드 여러 장을 한 래퍼로 묶어 배경·gap을 걸지 않는다
   - Auto gap(`SPACE_BETWEEN` 등) ❌ · 폭 380 · 여백은 0~40 · 2단위 · 카드별 옵션 범위 안
   - 에디터에 없는 장식·겹침·자유 배치 ❌ — 카드로 못 옮기면 그 요소는 시안에서 뺀다
   - 제품 동작은 `[DS]` 스펙이 아니라 **허브 사전 §3**(실측)을 기준으로 한다
 - **D5가 `verified:false`거나 CdBd-legal 위반이 남으면 G2로 가지 않는다** — 고쳐서 재검수(≤2회) · 초과하면 무엇이 안 되는지 사용자에게 보고.
-- → 🛑 **G2**: Figma 링크 3안을 보여 주고 구현할 안을 받는다.
+- → 🛑 **G2**: Figma 링크로 시안을 보여 주고 구현할 안을 받는다. 사용자가 **「둘 다 에디터로」** 하면 룩북 관례대로 **A·B를 한 멀티페이지에** 넣는다(시안 표지 → 01 → 03 순 · A 다음 B).
 
 ## 4. 에디터 구현
 
+- **룩북형(통 이미지 페이지)** = 내보내기(페이지 3배 JPG · OG 1배) → 작업 폴더 `작업파일/시안/` → **새 멀티페이지는 헤드리스 UI로 생성**(홈 「새 페이지 만들기」 → 빈 페이지로 시작하기 → 멀티페이지 → 380×580 [시작하기] → 테마 [시작하기]·[다음]·[완료]) → **브라우저를 에디터 밖으로 옮긴 뒤** `image_library.upload_if_missing()`로 등록 → `editor.pages` PATCH(카드 매핑 = `1-4` 「페이지 유형별 카드 매핑」 · 표지·01 = `linkButton` type `page` → 다음 페이지) → 에디터를 다시 열어 페이지 목록으로 확인. 실측 예: 끌로디 시안 = editor 6642
 - **새 페이지를 만들어 거기에 구현한다.** 남의 작업 페이지·기존 게시 페이지를 건드리지 않는다(💰 공용 계정 규칙 2 — 에디터는 자동저장). 기존 페이지를 고쳐 달라는 요청이면 **id를 사용자에게 확인**하고 기준선(`dumpState()`)부터 뜬다.
 - 워크플로우 `cdbd-editor-pipeline`(`mode: 'full'` · `{editorId, figmaFileKey, figmaNodeId}`)로 토대 → 채움 → 검증 → 수정까지 돈다. 에이전트(`editor-*`)·워크플로우는 **`cdbd-templates` 볼트에서 켠 세션에서만 잡힌다** → 다른 볼트면 `cdbd-templates`에서 실행하거나, 스킬 `cdbd-card-automation`으로 같은 순서를 직접 수행한다.
 - 🚨 **예약 카드를 추가하면 접수 건당 크레딧이 든다**(사전 §10) — 요청서에 예약이 있으면 G1에서 이미 알렸어야 한다.
