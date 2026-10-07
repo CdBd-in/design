@@ -89,6 +89,7 @@ description: Use when the user asks to turn an email request into a published Cd
   - **패션 룩북 · EDM · 카탈로그**(화보 + 상품 리스트 · 380×580 멀티) → **`cdbd-design-service` 룩북 시안 절차** `룩북/1. 제작 프로세스/1-2. 시안.md` 「제작 단계 8단계」 + `2. 디자인 가이드/2-1·2-2·2-4` — **A·B 2안**, 각 안 = 시안 표지 · 01 표지 · (02 소개) · 03 내지. 페이지 = 380×580 통 이미지 1장(이미지 카드). 02는 문서(견적서 페이지 구성 등)에 없으면 생략
   - **CdBd 템플릿형 페이지**(카드로 조립하는 초대장·명함·이벤트 등) → 스킬 **`draft`**(D1 내용 → D2 조합 → D3 통일 → D4 무드 → D5 검수)
 - 입력 = 2번 요청서.
+- 🔑 **사용자 고정 규칙 (2026-10-07)** — ① **상품명·가격 등 정보 텍스트는 CdBd 텍스트 카드**로(통 이미지 금지 · 좌 상품명 ↔ 우 가격 = 2열 카드 텍스트+텍스트) ② **A·B는 색·서체까지 다르게** — 한 안은 룩북에 어울리는 배경·포인트 색 + CdBd 에디터 서체(`playfairDisplay` 등) ③ **에디터 제목 = 브랜드명만**, **URL 설명 = 컬렉션명**. 정본 = `cdbd-design-service/CLAUDE.md` 레이아웃 핵심 원칙
 - **구현 가능성 = 필수 통과 조건.** `cdbd-draft-shared.md` 「🧱 CdBd-legal」과 `cdbd-templates/CLAUDE.md`를 따른다. 요지만:
   - **평면 카드 스택** — 모든 요소가 CdBd 카드(기본 14종 + 2열 6종) 하나에 대응 · 카드 여러 장을 한 래퍼로 묶어 배경·gap을 걸지 않는다
   - Auto gap(`SPACE_BETWEEN` 등) ❌ · 폭 380 · 여백은 0~40 · 2단위 · 카드별 옵션 범위 안
@@ -122,7 +123,7 @@ description: Use when the user asks to turn an email request into a published Cd
   (규칙: 3~30자 · 영문·숫자·_·. · 점으로 시작/끝 불가 · 하이픈·공백·한글 불가)
   {메일·브랜드에서 뽑은 후보가 있으면: 후보 = aaa_2610 / bbb}
 - 💰 비용: {유형} {기간} = {N}C  (현재 잔액: 크레딧 {C}C · 포인트 {P}P — 홈 기준)
-- 제목 / 설명 / OG 이미지: {…}
+- 제목 / 설명 / OG 이미지: {브랜드명만 · 컬렉션명 · og.jpg}
 - 에디터: https://www.cdbd.in/editor/{id}   · 시안: {Figma 링크}
 - 남은 차이: {없음 | 목록}
 ```
