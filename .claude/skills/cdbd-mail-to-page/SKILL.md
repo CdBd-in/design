@@ -12,7 +12,7 @@ description: Use when the user asks to turn an email request into a published Cd
 ## 흐름
 
 ```
-0 준비 ─ 1 메일 읽기 ─ 2 요청 정리 ─🛑G1─ 3 Figma 시안 ─🛑G2─ 4 에디터 구현 ─ 5 게시 전 점검 ─🛑G3─ 6 게시 ─ 7 URL 보고
+0 준비 ─ 1 메일 읽기 ─ 2 요청 정리 ─🛑G1─ 3-0 Figma 파일 준비 ─ 3 Figma 시안 ─🛑G2─ 4 에디터 구현 ─ 5 게시 전 점검 ─🛑G3─ 6 게시 ─ 7 URL 보고
 ```
 
 | 단계 | 하는 일 | 정본 (그때 읽는다) |
@@ -20,6 +20,7 @@ description: Use when the user asks to turn an email request into a published Cd
 | 0 준비 | 메일 도구 · 인증 · Figma 연결 확인 | `tools/cdbd-doctor.sh` |
 | 1 메일 | help@cdbd.in 받은편지함에서 요청 메일을 찾는다 | 아래 「1」 |
 | 2 요청 정리 | 메일 → 요청서(주제 · 목적 · 필수 정보 · 자료 · 기한) | `cdbd-templates/1. 작업 가이드/1-2. 기획 문서 템플릿.md` |
+| 3-0 파일 | 브랜드 Figma 파일 생성 → 이름 `{브랜드명}_{YYMM}` → `Cover` 썸네일 → CdBd_Service 폴더 | 아래 「3-0」 (사용자 시연 영상) |
 | 3 시안 | **Figma에 먼저** 시안 · **CdBd-legal만** | 스킬 `draft` · `cdbd-templates/.claude/cdbd-draft-shared.md` |
 | 4 에디터 | 채택한 시안을 CdBd 에디터에 구현 → 검증 → 수정 | 워크플로우 `cdbd-templates/.claude/workflows/cdbd-editor-pipeline.js` · 스킬 `cdbd-card-automation` |
 | 5 점검 | 게시 전 최종 검증 | `cdbd-design-service/룩북/1. 제작 프로세스/1-4. CdBd 콘텐츠.md` 「6.5. 최종 검증 체크리스트」 |
@@ -47,7 +48,8 @@ description: Use when the user asks to turn an email request into a published Cd
 
 ## 1. 메일 읽기
 
-- 대상 = **help@cdbd.in** 받은편지함. 사용자가 메일을 특정하지 않았으면 **최근 요청 메일 후보를 목록으로 보여 주고 고르게** 한다(보낸 사람 · 제목 · 날짜). 임의로 하나를 골라 제작에 들어가지 않는다.
+- 도구 = Gmail 커넥터 `search_threads`(예 `in:inbox newer_than:7d -from:help@cdbd.in`) → `get_thread`(`messageFormat: PLAIN_TEXT`). 2026-10-07 연결 확인(help@cdbd.in).
+- 대상 = **help@cdbd.in** 받은편지함. 구글 폼 접수 알림(`forms-receipts-noreply`)·자기 자신에게 보낸 메일도 섞여 있다 — 요청 메일인지 보고 고른다. 사용자가 메일을 특정하지 않았으면 **최근 요청 메일 후보를 목록으로 보여 주고 고르게** 한다(보낸 사람 · 제목 · 날짜). 임의로 하나를 골라 제작에 들어가지 않는다.
 - 읽기만 한다. **답장 · 전달 · 보관 · 삭제 · 라벨 변경은 하지 않는다**(사용자가 따로 시킬 때만).
 - 첨부(로고 · 사진 · 문서)는 목록과 용도를 적어 둔다. 고객 개인정보(연락처 등)는 요청서에 필요한 만큼만 옮긴다.
 
@@ -58,9 +60,31 @@ description: Use when the user asks to turn an email request into a published Cd
 - 페이지 유형·장수를 잡는다. 🚨 **11장 이상 멀티페이지는 자동화 게시가 막힌다**(≤10장만 자동 · 정본 = `1-4. CdBd 콘텐츠.md` 「11P 이상은 게시가 막힌다」) → G1에서 고지하고 장수를 줄일지 / 게시 버튼만 사용자가 누를지 정한다.
 - 💰 예상 금액을 사전 §10으로 계산해 함께 말한다(원페이지 1·2·12개월 / 멀티 페이지당 · 유형별 선택지가 다르다).
 
+## 3-0. Figma 파일 준비 — 🔑 시안보다 먼저, 매번
+
+> 근거 = 사용자 시연 영상 `~/Desktop/피그마 디자인 파일 생성.mov`(2026-10-07 · 84초). 팀이 손으로 하던 순서를 그대로 옮긴 것이다.
+> **이 네 가지가 끝나기 전에는 시안을 그리지 않는다.**
+
+| # | 영상에서 사람이 한 것 | 여기서 하는 법 |
+|---|---|---|
+| ① 파일 생성 | Figma 홈(팀 **CdBd · Professional**) → **[+ Design]** | `create_new_file` · `editorType: "design"` · `planKey: "team::899267143886282181"`(whoami의 **pro** 플랜 — starter 플랜 3개와 혼동 금지) |
+| ② 파일 이름 | 좌상단 파일명 → **`브랜드명_제작년도+월`** | `fileName` = **`{브랜드명}_{YYMM}`** — 예 `랙앤본_2610` · YYMM = **제작하는 달**(2026년 10월 → `2610`) · 브랜드명은 메일의 표기(한글이면 한글) · 기존 파일 `슬로웨어_2608` · `코사_2608` 등과 같은 규칙 |
+| ③ 썸네일 | 기존 파일(`랙앤본_2610`)의 **`Cover`** 프레임을 복사해 붙이고 → 글자 교체 → `Cover` 우클릭 **[Set as thumbnail]** | `use_figma`로 **`Cover` 프레임을 새로 만든다**(파일 간 복사는 API로 안 됨) → `await figma.setFileThumbnailNodeAsync(cover)` |
+| ④ 위치 | 파일명 옆 ▾ → **[Move file…]** → **`CdBd_Service`**(팀 CdBd) → [Move] → 「File moved · Moved to CdBd_Service」 | `create_new_file`에 **`projectId` = CdBd_Service**를 넣어 **처음부터 그 폴더에** 만든다(옮기기 API는 없다) |
+
+**`Cover` 프레임 규격** (영상 실측 · 기존 `랙앤본_2610`과 동일하게)
+- 프레임 이름 **`Cover`** · **1920 × 1080** · 배경 **#000000** · `Page 1` 맨 위(x 0 · y 0)
+- 왼쪽 글자 묶음 `Frame 1` — ⓐ **브랜드명** Pretendard **SemiBold 140** #FFFFFF ⓑ **YYMM**(예 `2610`) Pretendard **SemiBold 100** #FFFFFF · 왼쪽 아래 정렬
+- 오른쪽 `A01` — **그 브랜드의 대표 이미지**(세로형). 메일 첨부에서 고르고 `upload_assets`로 올린다. 🚫 예시 파일의 랙앤본 사진을 그대로 두지 않는다 · 쓸 이미지가 없으면 회색 자리표시로 두고 G1에서 받는다
+- 세부 값(여백·이미지 크기·위치)은 **기존 브랜드 파일의 `Cover`를 `use_figma`로 읽어** 맞춘다(읽기만 · 원본은 건드리지 않는다)
+
+**확인하고 넘어간다** — 파일 URL · 이름 · 썸네일 지정 성공 · 위치가 CdBd_Service인지. 하나라도 안 되면 **시안으로 넘어가지 말고** 사용자에게 무엇이 안 됐는지 말한다(예: `projectId`를 모르면 「CdBd_Service 폴더 URL을 알려 주세요」 — Figma에서 그 폴더를 열면 주소창이 `figma.com/files/…/project/{숫자}` 형태).
+
+> 📌 **CdBd_Service `projectId`** = ⏳ 아직 미기록 — 처음 받으면 **이 줄에 숫자를 적어 커밋**한다.
+
 ## 3. Figma 시안 — 🔑 CdBd 에디터로 구현 가능한 것만
 
-- **항상 Figma에 먼저 만든다.** 에디터에 바로 만들지 않는다.
+- **항상 Figma에 먼저 만든다.** 에디터에 바로 만들지 않는다. **3-0에서 만든 브랜드 파일 안에** 그린다 — `draft` 스킬의 기본 산출 위치(섹션 파일 「조합 테스트」)가 아니라 **이 파일의 `Page 1`, `Cover` 아래**(또는 `시안` 페이지).
 - 스킬 **`draft`**를 불러 그 절차대로 3안을 만든다(D1 내용 → D2 조합 → D3 통일 → D4 무드 → D5 검수). 입력 = 2번 요청서.
 - **구현 가능성 = 필수 통과 조건.** `cdbd-draft-shared.md` 「🧱 CdBd-legal」과 `cdbd-templates/CLAUDE.md`를 따른다. 요지만:
   - **평면 카드 스택** — 모든 요소가 CdBd 카드(기본 14종 + 2열 6종) 하나에 대응 · 카드 여러 장을 한 래퍼로 묶어 배경·gap을 걸지 않는다
@@ -115,7 +139,7 @@ description: Use when the user asks to turn an email request into a published Cd
 - URL: https://cdbd.in/{내 주소}/{슬러그}
 - 유형·기간: {원페이지|멀티 N장} · {N}개월 (만료 {날짜})
 - 💰 차감: {N}C  (잔액 크레딧 {C}C · 포인트 {P}P)
-- 에디터: /editor/{id}   · 시안: {Figma 링크}
+- 에디터: /editor/{id}   · 시안: {Figma 파일 링크 — `{브랜드명}_{YYMM}` · CdBd_Service}
 - 확인 못 한 것 / 남은 차이: {없음 | 목록}
 ```
 
