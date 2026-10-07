@@ -21,13 +21,13 @@ for r in "${REPOS[@]}"; do
   read -r ahead behind < <(git -C "$d" rev-list --left-right --count "HEAD...$up")
   dirty=$(git -C "$d" status --porcelain | wc -l | tr -d ' ')
   if [ "$behind" -eq 0 ]; then
-    msg="최신"; [ "$ahead" -gt 0 ] && { msg="최신 · ⚠️ push 안 한 커밋 $ahead개"; bad=1; }
-    [ "$dirty" -gt 0 ] && msg="$msg · 미커밋 $dirty건"
+    msg="최신"; [ "$ahead" -gt 0 ] && { msg="최신 · ⚠️ push 안 한 커밋 ${ahead}개"; bad=1; }
+    [ "$dirty" -gt 0 ] && msg="$msg · 미커밋 ${dirty}건"
     echo "  ✅ $name — $msg"; continue
   fi
-  if [ "$dirty" -gt 0 ]; then echo "  ⚠️  $name — 받을 커밋 $behind개 있지만 미커밋 $dirty건이 있어 건너뜀"; bad=1; continue; fi
+  if [ "$dirty" -gt 0 ]; then echo "  ⚠️  $name — 받을 커밋 ${behind}개 있지만 미커밋 ${dirty}건이 있어 건너뜀"; bad=1; continue; fi
   if [ "$ahead" -gt 0 ]; then echo "  ⚠️  $name — 갈라짐(내 커밋 $ahead · 원격 $behind) → 건너뜀 · 직접 확인: git -C \"$d\" log $up..HEAD"; bad=1; continue; fi
-  if git -C "$d" pull -q --ff-only 2>/dev/null; then echo "  🔧 $name — $behind개 받음"
+  if git -C "$d" pull -q --ff-only 2>/dev/null; then echo "  🔧 $name — ${behind}개 받음"
   else echo "  ❌ $name — pull 실패"; bad=1; fi
 done
 date +%s > "$ROOT/.git/cdbd-last-sync" 2>/dev/null || true

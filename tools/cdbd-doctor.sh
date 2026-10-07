@@ -27,10 +27,10 @@ for r in "${VAULTS[@]}"; do
   up=$(git -C "$d" rev-parse --abbrev-ref '@{u}' 2>/dev/null) || { warn "$n — 추적 브랜치 없음"; continue; }
   read -r a b < <(git -C "$d" rev-list --left-right --count "HEAD...$up")
   dirty=$(git -C "$d" status --porcelain | wc -l | tr -d ' ')
-  extra=""; [ "$dirty" -gt 0 ] && extra=" · 미커밋 $dirty건"
+  extra=""; [ "$dirty" -gt 0 ] && extra=" · 미커밋 ${dirty}건"
   if [ "$a" -eq 0 ] && [ "$b" -eq 0 ]; then pass "$n — 최신$extra"
-  elif [ "$a" -eq 0 ]; then fail "$n — $b개 뒤처짐 → tools/cdbd-sync.sh$extra"
-  elif [ "$b" -eq 0 ]; then warn "$n — push 안 한 커밋 $a개$extra"
+  elif [ "$a" -eq 0 ]; then fail "$n — ${b}개 뒤처짐 → tools/cdbd-sync.sh$extra"
+  elif [ "$b" -eq 0 ]; then warn "$n — push 안 한 커밋 ${a}개$extra"
   else fail "$n — 갈라짐(내 $a · 원격 $b) → 직접 확인$extra"; fi
 done
 
