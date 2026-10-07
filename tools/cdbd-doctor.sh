@@ -41,6 +41,7 @@ chk_link() { # dst expected label
   else fail "$3 — 없음/깨짐 → tools/cdbd-setup.sh"; fi
 }
 chk_link "$CLAUDE_DIR/skills/cdbd-card-automation" "$ROOT/cdbd-templates/.claude/skills/cdbd-card-automation" "전역 스킬 cdbd-card-automation"
+chk_link "$CLAUDE_DIR/skills/cdbd-mail-to-page" "$ROOT/.claude/skills/cdbd-mail-to-page" "전역 스킬 cdbd-mail-to-page"
 chk_link "$CFG/auth.py" "$ROOT/tools/cdbd/auth.py" "인증 헬퍼 auth.py"
 chk_link "$CFG/image_library.py" "$ROOT/tools/cdbd/image_library.py" "인증 헬퍼 image_library.py"
 if grep -q 'pinnedIds' "$CLAUDE_DIR/skills/cdbd-card-automation/card-driver.js" 2>/dev/null; then

@@ -7,6 +7,7 @@
 #   1. 하위 저장소 5개 확인 — 없으면 clone (SSH 키가 GitHub에 등록돼 있어야 함 · ONBOARDING §3)
 #   2. gstack(헤드리스 브라우저) 확인 — 없으면 설치 안내 후 중단
 #   3. 전역 스킬 링크   ~/.claude/skills/cdbd-card-automation → design/cdbd-templates/.claude/skills/cdbd-card-automation
+#                       ~/.claude/skills/cdbd-mail-to-page    → design/.claude/skills/cdbd-mail-to-page
 #   4. 인증 헬퍼 링크   ~/.config/cdbd/auth.py · image_library.py → design/tools/cdbd/
 #   5. ~/.config/cdbd/cdbd.env — 없으면 견본을 복사하고 채우라고 안내 (비밀값은 출력하지 않는다)
 #   6. ~/.claude/CLAUDE.md 에 전역 안내 @import 한 줄 (이미 있으면 건너뜀)
@@ -65,6 +66,7 @@ else die "gstack이 없습니다 — $CLAUDE_DIR/skills/gstack 설치 후 다시
 
 echo "3. 전역 스킬"
 link_safe "$ROOT/cdbd-templates/.claude/skills/cdbd-card-automation" "$CLAUDE_DIR/skills/cdbd-card-automation" "cdbd-card-automation"
+link_safe "$ROOT/.claude/skills/cdbd-mail-to-page" "$CLAUDE_DIR/skills/cdbd-mail-to-page" "cdbd-mail-to-page"
 
 echo "4. 인증 헬퍼"
 mkdir -p "$CFG"; chmod 700 "$CFG"
