@@ -6,7 +6,8 @@
 # 하는 일
 #   1. 하위 저장소 5개 확인 — 없으면 clone (SSH 키가 GitHub에 등록돼 있어야 함 · ONBOARDING §3)
 #   2. gstack(헤드리스 브라우저) 확인 — 없으면 설치 안내 후 중단
-#   3. 전역 스킬 링크   ~/.claude/skills/cdbd-card-automation → design/cdbd-templates/.claude/skills/cdbd-card-automation
+#   3. 전역 스킬 링크   ~/.claude/skills/design-bot → ../design-rules (없으면 clone)
+#                       ~/.claude/skills/cdbd-card-automation → design/cdbd-templates/.claude/skills/cdbd-card-automation
 #                       ~/.claude/skills/cdbd-mail-to-page    → design/.claude/skills/cdbd-mail-to-page
 #   4. 인증 헬퍼 링크   ~/.config/cdbd/auth.py · image_library.py → design/tools/cdbd/
 #   5. ~/.config/cdbd/cdbd.env — 없으면 견본을 복사하고 채우라고 안내 (비밀값은 출력하지 않는다)
@@ -65,6 +66,11 @@ if [ -x "$CLAUDE_DIR/skills/gstack/browse/dist/browse" ]; then ok "gstack browse
 else die "gstack이 없습니다 — $CLAUDE_DIR/skills/gstack 설치 후 다시 실행하세요 (ONBOARDING §3-6 Step 3)"; fi
 
 echo "3. 전역 스킬"
+DR="$(dirname "$ROOT")/design-rules"   # 디자인 규칙 저장소 — design 옆에 둔다 (D-DS-018)
+if [ -d "$DR/.git" ]; then ok "design-rules"
+elif git clone -q "$GH/design-rules.git" "$DR"; then fix "design-rules — clone 완료"
+else warn "design-rules clone 실패 — SSH 키를 확인하세요"; fi
+link_safe "$DR/.claude/skills/design-bot" "$CLAUDE_DIR/skills/design-bot" "design-bot"
 link_safe "$ROOT/cdbd-templates/.claude/skills/cdbd-card-automation" "$CLAUDE_DIR/skills/cdbd-card-automation" "cdbd-card-automation"
 link_safe "$ROOT/.claude/skills/cdbd-mail-to-page" "$CLAUDE_DIR/skills/cdbd-mail-to-page" "cdbd-mail-to-page"
 
